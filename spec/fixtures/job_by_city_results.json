@@ -1,0 +1,27 @@
+[
+{
+"id": "1",
+"type": "job",
+"attributes": {
+"company": "Toy, Steuber and Schinner",
+"salary": 100,
+"location": "new york"
+"contact": "someemailadress"}},
+{
+"id": "2",
+"type": "job",
+"attributes": {
+"company": "Twilio",
+"salary": 150,
+"location": "new york"
+ "contact": "someemailadress"}
+},
+{
+"id": "3",
+"type": "job",
+"attributes": {
+  "company": "Doximity",
+  "salary": 150,
+  "location": "new york"
+   "contact": "someemailadress"}
+}]
