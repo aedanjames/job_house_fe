@@ -1,11 +1,10 @@
-[
-{
+[{
 "id": "1",
 "type": "job",
 "attributes": {
 "company": "Toy, Steuber and Schinner",
 "salary": 100,
-"location": "new york"
+"location": "new york",
 "contact": "someemailadress"}},
 {
 "id": "2",
@@ -13,7 +12,7 @@
 "attributes": {
 "company": "Twilio",
 "salary": 150,
-"location": "new york"
+"location": "new york",
  "contact": "someemailadress"}
 },
 {
@@ -22,6 +21,6 @@
 "attributes": {
   "company": "Doximity",
   "salary": 150,
-  "location": "new york"
+  "location": "new york",
    "contact": "someemailadress"}
 }]

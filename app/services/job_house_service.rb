@@ -1,4 +1,4 @@
-class JobhouseService
+class JobHouseService
   class << self
     def connection
       Faraday.new(url: 'https://gentle-beach-60003.herokuapp.com/')
