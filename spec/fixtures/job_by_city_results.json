@@ -4,7 +4,7 @@
 "attributes": {
 "company": "Toy, Steuber and Schinner",
 "salary": 100,
-"location": "new york",
+"location": {"city": "new york", "state": "NY"}, 
 "contact": "someemailadress"}},
 {
 "id": "2",
@@ -12,7 +12,7 @@
 "attributes": {
 "company": "Twilio",
 "salary": 150,
-"location": "new york",
+"location": {"city": "new york", "state": "NY"},
  "contact": "someemailadress"}
 },
 {
@@ -21,6 +21,6 @@
 "attributes": {
   "company": "Doximity",
   "salary": 150,
-  "location": "new york",
+  "location": {"city": "new york", "state": "NY"},
    "contact": "someemailadress"}
 }]
