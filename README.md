@@ -7,8 +7,8 @@
 5.2.7
 
 ## CONTRIBUTORS
-[I'm an inline-style link](https://www.google.com)
-[I'm an inline-style link](https://www.google.com)
-[I'm an inline-style link](https://www.google.com)
-[I'm an inline-style link](https://www.google.com)
-[I'm an inline-style link](https://www.google.com)
+* [Aedan](https://github.com/aedanjames)
+* [Eldridge](https://github.com/Eldridge-Turambi)
+* [Austin](https://github.com/AustinCMoore)
+* [Sam](https://github.com/samlsmith424)
+* [Richard](https://github.com/RichardLaBrecque)
