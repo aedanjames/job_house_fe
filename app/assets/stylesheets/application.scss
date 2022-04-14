@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+#welcome_images {
+  width: 100vw;
+  background: white;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 1.5rem;
+}
+
+.link {
+  padding: 1rem;
+}
+
+.link img {
+  width: 16rem;
+  height: 11rem;
+}
+
+.link h3 {
+  font-weight: bold;
+  font-family: copperplate, fantasy;
+}
