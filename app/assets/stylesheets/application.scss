@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+ #welcome_image {
+  height: 560px;
+  width: 100%;
+  background-image: image-url("1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#welcome_images {
+  width: 100vw;
+  background: white;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 1.5rem;
+}
+
+.link {
+  padding: 1rem;
+}
+
+.link img {
+  width: 12rem;
+  height: 7rem;
+}
+
+.link h3 {
+  font-weight: bold;
+}
