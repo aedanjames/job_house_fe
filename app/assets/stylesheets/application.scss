@@ -14,15 +14,6 @@
  *= require_self
  */
 
- #welcome_image {
-  height: 560px;
-  width: 100%;
-  background-image: image-url("1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
 #welcome_images {
   width: 100vw;
   background: white;
@@ -37,10 +28,11 @@
 }
 
 .link img {
-  width: 12rem;
-  height: 7rem;
+  width: 16rem;
+  height: 11rem;
 }
 
 .link h3 {
   font-weight: bold;
+  font-family: copperplate, fantasy;
 }
