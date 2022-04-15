@@ -4,10 +4,10 @@ RSpec.describe Job do
   it "exists with attributes" do
     data = {
       :id => '1',
-      :attributes => { 
+      :attributes => {
         :company => "Twilio",
         :salary => "100",
-        :location => "Denver",
+        :location => {city: 'denver', state: 'colorado'},
         :contact => "emailaddress@email.com"
       }
     }
@@ -18,7 +18,8 @@ RSpec.describe Job do
     expect(job.id).to eq('1')
     expect(job.company).to eq('Twilio')
     expect(job.salary).to eq('100')
-    expect(job.location).to eq('Denver')
+    expect(job.city).to eq('denver')
+    expect(job.state).to eq('colorado')
     expect(job.contact).to eq('emailaddress@email.com')
   end
 end
