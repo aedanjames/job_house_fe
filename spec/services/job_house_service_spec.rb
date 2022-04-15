@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'JobHouseService' do
   describe 'class methods' do
-    it '.jobs_by_city' do
+    xit '.jobs_by_city' do
       json_response = File.read('spec/fixtures/job_by_city_results.json')
 
       stub_request(:get, "https://gentle-beach-60003.herokuapp.com/search/jobs?city=new%20york&state=NY").
