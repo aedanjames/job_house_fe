@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     user = UserFacade.find_or_create_user(email)
     session[:access_token] = auth_hash[:credentials][:token]
     session[:user] = user
-    binding.pry
     redirect_to root_path
   end
 end
