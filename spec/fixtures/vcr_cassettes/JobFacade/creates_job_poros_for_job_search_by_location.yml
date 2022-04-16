@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/jobs?where=california
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b2d11ff2bfd11ff75ecb367c04980af2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ea7895c5-8d1d-4f77-9620-16645b7eb9e5
+      X-Runtime:
+      - '1.622388'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3032398554","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3032398554","company":"DIRECTV","contact":"https://www.adzuna.com/land/ad/3032398554?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=7494C0E78CEF6A88CB84272088A866DAD832C4C8"}},{"id":"3023732261","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3023732261","company":"Rain Therapeutics","contact":"https://www.adzuna.com/land/ad/3023732261?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=741F7C9110837B9EF83B1CFEACFAB2C41E20EB1B"}},{"id":"3038471074","type":"job","attributes":{"salary":225,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3038471074","company":"State of California","contact":"https://www.adzuna.com/land/ad/3038471074?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=D1AE67B36345F687A2D9930F6B96DE0A82DE1977"}},{"id":"2993943997","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2993943997","company":"Advanced Micro Devices","contact":"https://www.adzuna.com/land/ad/2993943997?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=FA78F20A1E287D602D6CB0C56F93CBB589B7960F"}},{"id":"3013623022","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3013623022","company":"Apple","contact":"https://www.adzuna.com/land/ad/3013623022?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=1BF66D5CB9BD99485DAC99DA38123248F9DD898F"}},{"id":"3038470209","type":"job","attributes":{"salary":225,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3038470209","company":"Culture Biosciences","contact":"https://www.adzuna.com/land/ad/3038470209?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=ED75FFFAA6603F06060F054C9ED8C9BE91E207D5"}},{"id":"2993940849","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2993940849","company":"Insight Global","contact":"https://www.adzuna.com/land/ad/2993940849?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=52218ACB18D8AA4365EBECB5828E3A2E187A5553"}},{"id":"3056672502","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3056672502","company":"Lever","contact":"https://www.adzuna.com/land/ad/3056672502?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=49716BD10E5D46438AEF8B4D8AFA76D7FC76C2DB"}},{"id":"3031229445","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3031229445","company":"GLOVIS America","contact":"https://www.adzuna.com/land/ad/3031229445?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=50475EB03DD3B9FCC529E18C14CD74961A4CCA00"}},{"id":"3035494902","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3035494902","company":"Advanced Micro Devices","contact":"https://www.adzuna.com/land/ad/3035494902?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=3564D26274F4031A84CAD472002AE4F466E844C6"}},{"id":"3031219271","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3031219271","company":"HD Supply","contact":"https://www.adzuna.com/land/ad/3031219271?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=02F7A0E18DFD047EBE21ACA3D738FD55A19966ED"}},{"id":"3029412837","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3029412837","company":"Vizio, Inc.","contact":"https://www.adzuna.com/land/ad/3029412837?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=34AE26CB8C8A686C31E3090C03F644A27112176D"}},{"id":"2993920952","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2993920952","company":"Zentek Infosoft Inc.","contact":"https://www.adzuna.com/land/ad/2993920952?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=74E44792C1558EE11C029E564C3D81C7F3CB1380"}},{"id":"3031231121","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3031231121","company":"Mythical Games","contact":"https://www.adzuna.com/land/ad/3031231121?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=34E20B78499700BFAF28BEA8EE29DE000D111CB2"}},{"id":"3025992787","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3025992787","company":"Energy Solutions","contact":"https://www.adzuna.com/land/ad/3025992787?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=566568FC38876FED011EC4F2F5439CF4CB904FE6"}},{"id":"3031236794","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3031236794","company":"Therapy Travelers","contact":"https://www.adzuna.com/land/ad/3031236794?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=08114C2A3DE5D1C075BBF764FB7CDD4ECE8329E3"}},{"id":"3031246034","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3031246034","company":"Constella Intelligence","contact":"https://www.adzuna.com/land/ad/3031246034?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=75F439ADB212E404BC1AFDBB103A80DEF5E91752"}},{"id":"2993924032","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2993924032","company":"EROS Technologies
+        Inc.","contact":"https://www.adzuna.com/land/ad/2993924032?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=61ABA52B80F5332335C39E2D7EB736D7F4284169"}},{"id":"3032398791","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3032398791","company":"Arm Treasure Data
+        Ltd","contact":"https://www.adzuna.com/land/ad/3032398791?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=273EE693270ECFE51C60041A64F8C113FD1F0F65"}},{"id":"3013624999","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3013624999","company":"Charles Schwab \u0026
+        Co., Inc.","contact":"https://www.adzuna.com/land/ad/3013624999?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=50E1EF1856AC05877079FEFA1DCA7DE439C66123"}},{"id":"2722702733","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2722702733","company":"E*Pro Inc","contact":"https://www.adzuna.com/land/ad/2722702733?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=EB73F69B1FAFCC646C0DA348271724F056AB0DCC"}},{"id":"3002782956","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3002782956","company":"Apple","contact":"https://www.adzuna.com/land/ad/3002782956?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=FD1C5F4D589EE2FCB7CD11518E1FC9DF0E372A03"}},{"id":"2722732364","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2722732364","company":"International Rescue
+        Committee ","contact":"https://www.adzuna.com/land/ad/2722732364?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=65984AF82E7B64E15B81AEB2303D776BA28FF1B0"}},{"id":"3038478881","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3038478881","company":"Insight Global","contact":"https://www.adzuna.com/land/ad/3038478881?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=487EE897126D3A1D2C424D5C6642D0471843BBA4"}},{"id":"3032408754","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3032408754","company":"Kepler Group Llc","contact":"https://www.adzuna.com/land/ad/3032408754?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=486040A4BACD3BE9DB6DBF9136855A652A741F49"}},{"id":"2989224993","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2989224993","company":"EROS Technologies
+        Inc.","contact":"https://www.adzuna.com/land/ad/2989224993?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=A09B23C11002BAC1FCE18E7E935B6311EC831FDF"}},{"id":"2993920087","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2993920087","company":"EROS Technologies
+        Inc.","contact":"https://www.adzuna.com/land/ad/2993920087?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=9AC19E0DBE63369037577C4E67078F3FFDD90A71"}},{"id":"2722688539","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2722688539","company":"Advanced Micro Devices","contact":"https://www.adzuna.com/land/ad/2722688539?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=E31D848069BD0E08FB8789F9244BB86D3FBA2D0D"}},{"id":"2988314952","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2988314952","company":"SquarePeg","contact":"https://www.adzuna.com/land/ad/2988314952?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=2F8CAD31B478D4805EEC88F57548CE91593B9853"}},{"id":"3008590697","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3008590697","company":"Cambridge Memorial
+        Hospital","contact":"https://www.adzuna.com/land/ad/3008590697?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=ECCCAC3A4C448509B38AB431B904F5A09B292101"}},{"id":"2722731994","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2722731994","company":"CNCSINFOTECH LLC","contact":"https://www.adzuna.com/land/ad/2722731994?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=6E11A4A932D4E4B7BCDDE103809B955B0C84069D"}},{"id":"2722700608","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2722700608","company":"Emparty","contact":"https://www.adzuna.com/land/ad/2722700608?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=30E3576A213B75F2BCBD5AEBBDC0BF5FFE094B65"}},{"id":"2676042665","type":"job","attributes":{"salary":225,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2676042665","company":"SA TECHNOLOGIES","contact":"https://www.adzuna.com/land/ad/2676042665?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=38193FC5E18E363EBAFC553B1A946095AF3A9B66"}},{"id":"3048231927","type":"job","attributes":{"salary":225,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3048231927","company":"Blume Global","contact":"https://www.adzuna.com/land/ad/3048231927?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=13CA6CD623A9282D8A09F93911741CC7B87AF644"}},{"id":"3035508243","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3035508243","company":"WELLS FARGO BANK","contact":"https://www.adzuna.com/land/ad/3035508243?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=88A1DA4C8D96A8D4862AB7BEBBAB0B00D64DF890"}},{"id":"2993933756","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2993933756","company":"Yochana IT Solutions
+        Inc","contact":"https://www.adzuna.com/land/ad/2993933756?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=E22D36B324AACA1553CBDBC9E4D53AA28EB7653F"}},{"id":"3029393108","type":"job","attributes":{"salary":225,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3029393108","company":"Global Jobs","contact":"https://www.adzuna.com/land/ad/3029393108?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=0DE2DF12DADF41FE6A38FA572E185F765924DCF2"}},{"id":"3040668659","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3040668659","company":"Insight Global","contact":"https://www.adzuna.com/land/ad/3040668659?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=90FB166237E17C46910E5518A5D8D903424D56F3"}},{"id":"2722705785","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2722705785","company":"blueStone","contact":"https://www.adzuna.com/land/ad/2722705785?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=F32A463D1CF4FD1CF35B25C8D0F21DD1B9F50185"}},{"id":"2676042686","type":"job","attributes":{"salary":225,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2676042686","company":"Brett Fisher Group,
+        LLC","contact":"https://www.adzuna.com/land/ad/2676042686?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=A5524902E7B5F18CF4562082039D183A8D54AC4A"}},{"id":"3048236431","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3048236431","company":"Google","contact":"https://www.adzuna.com/land/ad/3048236431?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=D6C3A49130599DEB07D2C7B4968596C49CEA71A7"}},{"id":"3023725655","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3023725655","company":"Logitech","contact":"https://www.adzuna.com/land/ad/3023725655?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=192966886690091837A2416E56719599C6257531"}},{"id":"2676024841","type":"job","attributes":{"salary":225,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2676024841","company":"Quantix","contact":"https://www.adzuna.com/land/ad/2676024841?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=E860FA723E56006EC8A92C93BFF6317B52EF5CC8"}},{"id":"3044717430","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3044717430","company":"Petrol Advertising","contact":"https://www.adzuna.com/land/ad/3044717430?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=F26F66C9760B157F4249D92D4B9381DB578F2F13"}},{"id":"3040668460","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3040668460","company":"PEAK SEASON INC","contact":"https://www.adzuna.com/land/ad/3040668460?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=0DA44041A097E5F756950D544321968FC6F82205"}},{"id":"3044717685","type":"job","attributes":{"salary":336000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3044717685","company":"Logitech","contact":"https://www.adzuna.com/land/ad/3044717685?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=F772B17F0DEA164ED0E70D6A1494238135EB3F38"}},{"id":"3029414863","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3029414863","company":"Bionaut Labs","contact":"https://www.adzuna.com/land/ad/3029414863?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=5F927BF3F4CD7DA534B0D14716F982D5DAA3EBB1"}},{"id":"3038472577","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"3038472577","company":"Confluent Inc","contact":"https://www.adzuna.com/land/ad/3038472577?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=4518042102E4E06EE5B540D15F15C0041A73C573"}},{"id":"2993953333","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2993953333","company":"Global Jobs","contact":"https://www.adzuna.com/land/ad/2993953333?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=D7C2A15F9A0C3275E63BBB2BD1A19BF013A948C4"}},{"id":"2989251969","type":"job","attributes":{"salary":264000,"location":{"city":"Campbell
+        County","state":"Kentucky"},"id":"2989251969","company":"Siter Neubauer","contact":"https://www.adzuna.com/land/ad/2989251969?se=rgdIMsS97BGb_FUCEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=0BF1C13B42A0AD84FF103226C99DCEB4312DB637"}}]}'
+  recorded_at: Sat, 16 Apr 2022 20:31:30 GMT
+recorded_with: VCR 6.1.0
