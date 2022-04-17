@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def index
     @user_email = session[:user].values[1]
+    @user_jobs = session[:user].values[2]
   end
 
   def logout
