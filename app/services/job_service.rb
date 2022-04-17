@@ -13,7 +13,7 @@ class JobService
       response = connection.get('jobs') do |faraday|
         faraday.params[:where] = location
       end
-      parse_json(response)
+      parse_json(response)[:data]
     end
   end
 end

@@ -18,5 +18,5 @@ class UsersController < ApplicationController
   def logout
     session.destroy
     redirect_to root_path
-  end 
+  end
 end

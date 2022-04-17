@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def current_user 
     if session[:user]
       session[:user]
-    end 
+    end
   end
 
   def authorized

@@ -1,0 +1,9 @@
+<center>
+Jobs Found In <%= @location %>
+<% @jobs.each do |job| %>
+  <p>
+  City: <%= job.city %>
+  </p>
+  Salary: <%= job.salary %>
+<% end %>
+</center>
