@@ -1,13 +1,30 @@
 <center>
-Jobs Found In <%= @location %>
-<% @jobs.each do |job| %>
-  <p>
-  <%= job.company %>
-  <%= link_to "Apply!", "#{job.contact}", class: "link-success"%>
-  </p>
-  <p>
-  City: <%= job.city %>
-  </p>
-  Salary: <%= job.salary %>
+<%= form_with url: search_jobs_show_path, namespace: :search, method: :post, local: true do |f| %>
+  <% @jobs.each do |job| %>
+    <% f.label :id %>
+    <%= f.hidden_field :id, :value => "#{job.id}" %>
+
+    <% f.label :company %>
+    <%= f.hidden_field :company, :value => "#{job.company}" %>
+
+    <% f.label :city %>
+    <%= f.hidden_field :city, :value => "#{job.city}" %>
+
+    <% f.label :state %>
+    <%= f.hidden_field :state, :value => "#{job.state}" %>
+
+    <% f.label :salary %>
+    <%= f.hidden_field :salary, :value => "#{job.salary}" %>
+
+    <% f.label :contact %>
+    <%= f.hidden_field :contact, :value => "#{job.contact}" %>
+
+    <p>
+    <%= job.company %>
+    $<%= job.salary %>
+
+    <%= f.submit "See Details" %>
+  <% end %>
+    </p>
 <% end %>
 </center>
