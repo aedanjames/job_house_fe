@@ -10,7 +10,8 @@ class UsersController < ApplicationController
     # implement caching instead cache the response and set expiration(time based)
     # view specific caching?
     session[:user] = user
-    # @instance_variable ||= method
+    # Doesn't persist between controller actions
+    # Rails.cache.write('user', user)
     redirect_to dashboard_path
   end
 
