@@ -3,6 +3,7 @@ class JobService
 
     def connection
       Faraday.new('http://localhost:5000/api/v1/')
+      # Faraday.new(ENV['backend_url'])
     end
 
     def parse_json(response)

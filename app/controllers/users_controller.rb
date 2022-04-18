@@ -4,9 +4,13 @@ class UsersController < ApplicationController
   def authorize
     auth_hash = request.env['omniauth.auth']
     email = auth_hash[:info][:email]
-    user = UserFacade.find_or_create_user(email)
+    user = UserFacade.retrieve_user(email)
     session[:access_token] = auth_hash[:credentials][:token]
+    # sessions only store basic datatypes (not poro)
+    # implement caching instead cache the response and set expiration(time based)
+    # view specific caching?
     session[:user] = user
+    # @instance_variable ||= method
     redirect_to dashboard_path
   end
 
