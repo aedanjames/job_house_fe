@@ -1,11 +1,17 @@
-class Job 
-  attr_reader :id, :company, :salary, :location, :contact
+class Job
+  attr_reader :id,
+              :salary,
+              :city,
+              :state,
+              :company,
+              :contact
 
   def initialize(data)
     @id = data[:id]
-    @company = data[:attributes][:company]
     @salary = data[:attributes][:salary]
-    @location = data[:attributes][:location]
+    @city = data[:attributes][:location][:city]
+    @state = data[:attributes][:location][:state]
+    @company = data[:attributes][:company]
     @contact = data[:attributes][:contact]
-  end 
-end 
+  end
+end

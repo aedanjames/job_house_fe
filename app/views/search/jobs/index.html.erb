@@ -1,0 +1,13 @@
+<center>
+Jobs Found In <%= @location %>
+<% @jobs.each do |job| %>
+  <p>
+  <%= job.company %>
+  <%= link_to "Apply!", "#{job.contact}", class: "link-success"%>
+  </p>
+  <p>
+  City: <%= job.city %>
+  </p>
+  Salary: <%= job.salary %>
+<% end %>
+</center>
