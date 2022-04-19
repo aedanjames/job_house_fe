@@ -2,8 +2,8 @@ class ApplicationController < ActionController::Base
   helper_method :logged_in?, :current_user
 
   def current_user 
-    if session[:user]
-      session[:user]
+    if session[:access_token]
+      session[:access_token]
     end
   end
 
