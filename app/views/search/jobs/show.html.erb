@@ -1,5 +1,7 @@
 <center>
 <p>
+Title: <%= "#{@job.title}" %>
+<br>
 <%= "#{@job.company}" %>
 <br>
 <%= "#{@job.city}, #{@job.state}" %>
@@ -10,6 +12,9 @@ Salary: $<%= @job.salary %>
 <%= form_with url: search_jobs_save_path, method: :post, local: true do |f| %>
     <% f.label :id %>
     <%= f.hidden_field :id, :value => "#{@job.id}" %>
+
+    <% f.label :title %>
+    <%= f.hidden_field :title, :value => "#{@job.title}" %>
 
     <% f.label :company %>
     <%= f.hidden_field :company, :value => "#{@job.company}" %>

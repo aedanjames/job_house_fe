@@ -10,14 +10,17 @@ class UsersController < ApplicationController
     # implement caching instead cache the response and set expiration(time based)
     # view specific caching?
     session[:user] = user
+    session[:email] = email
+
     # Doesn't persist between controller actions
     # Rails.cache.write('user', user)
     redirect_to dashboard_path
   end
 
   def index
-    @user_email = session[:user].values[1]
-    @user_jobs = session[:user].values[2]
+    @user = UserFacade.retrieve_user(session[:email])
+    # @user_email = session[:user].values[1]
+    # @user_jobs = session[:user].values[2]
   end
 
   def logout
