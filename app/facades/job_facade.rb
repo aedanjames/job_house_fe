@@ -7,10 +7,10 @@ class JobFacade
         Job.new(job_data)
       end
     end
-    
+
     def single_job(params)
       job_data = {:id=> params[:id],
-                  :attributes=> 
+                  :attributes=>
                     {:salary=> params[:salary],
                       :location=> {:city=> params[:city], :state=> params[:state]},
                       :company=> params[:company],
@@ -20,7 +20,7 @@ class JobFacade
     end
   end
 
-  def save_job 
-    
-  end 
+  def save_job
+
+  end
 end
