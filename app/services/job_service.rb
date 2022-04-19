@@ -14,8 +14,7 @@ class JobService
       response = connection.get('jobs') do |faraday|
         faraday.params[:where] = location
       end
-      x = parse_json(response)
-      # require "pry"; binding.pry
+      parse_json(response)
     end
 
     def save_job(job, user_email)
