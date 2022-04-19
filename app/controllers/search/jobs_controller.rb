@@ -14,9 +14,10 @@ class Search::JobsController < ApplicationController
 
   def save
     job = JobFacade.single_job(job_params).to_json
+    JobService.save_job(job, session[:email])
     # JobFacade.<<method that triggers JobService API call to BE. Put job in body of request>>
   end
-private 
+private
 
   def job_params
     params.permit(:id,:company,:contact,:salary,:state,:city)
