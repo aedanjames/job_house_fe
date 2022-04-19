@@ -14,6 +14,7 @@ class JobFacade
                     {:salary=> params[:salary],
                       :location=> {:city=> params[:city], :state=> params[:state]},
                       :company=> params[:company],
+                      :title=> params[:title],
                       :contact=> params[:contact]}}
 
           Job.new(job_data)

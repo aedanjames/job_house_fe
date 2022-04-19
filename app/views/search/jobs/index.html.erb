@@ -4,6 +4,9 @@
     <% f.label :id %>
     <%= f.hidden_field :id, :value => "#{job.id}" %>
 
+    <% f.label :title %>
+    <%= f.hidden_field :title, :value => "#{job.title}" %>
+
     <% f.label :company %>
     <%= f.hidden_field :company, :value => "#{job.company}" %>
 
@@ -19,12 +22,12 @@
     <% f.label :contact %>
     <%= f.hidden_field :contact, :value => "#{job.contact}" %>
 
-    <p>
+
+    <%= job.title %>
     <%= job.company %>
     $<%= job.salary %>
 
     <%= f.submit "See Details" %>
   <% end %>
-    </p>
 <% end %>
 </center>
