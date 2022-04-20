@@ -10,7 +10,7 @@
         <%= "#{job.city}, #{job.state}" %>
       </section>
         <h5>
-          <small><%=job.title%></small>
+          <small><%= link_to "#{job.title}", "/jobs/#{job.id}"  %></small>
           <span class="badge bg-success">$<%=job.salary %></span>
         </h5>
     </li>
