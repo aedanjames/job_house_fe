@@ -4,20 +4,14 @@ class UsersController < ApplicationController
   def authorize
     auth_hash = request.env['omniauth.auth']
     email = auth_hash[:info][:email]
-    user = UserFacade.retrieve_user(email)
     session[:access_token] = auth_hash[:credentials][:token]
-    # sessions only store basic datatypes (not poro)
-    # implement caching instead cache the response and set expiration(time based)
-    # view specific caching?
-    session[:user] = user
-    # Doesn't persist between controller actions
-    # Rails.cache.write('user', user)
+    session[:email] = email
     redirect_to dashboard_path
   end
 
   def index
-    @user_email = session[:user].values[1]
-    @user_jobs = session[:user].values[2]
+    @user = UserFacade.retrieve_user(session[:email])
+    @jobs = JobFacade.format_jobs(@user.jobs)
   end
 
   def logout

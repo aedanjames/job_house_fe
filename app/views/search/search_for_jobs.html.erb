@@ -1,10 +1,24 @@
+<br>
 <center>
-  <section class="mb-3">
+  <section class="mb-3, shadow-sm p-3 mb-5 bg-body rounded">
     <%= form_with url: search_jobs_results_path, method: :get, local: true do |form| %>
-      <%= form.label :location, 'Enter Desired Job location:', class: "form-label" %>
+      <%= form.label :location, 'Enter Desired Job Location:', class: "form-label, text-decoration-underline" %>
       <%= form.text_field :location %>
       <%= form.submit 'Search', class: "btn btn-primary" %>
     <% end %>
     </p>
   </section>
-<center>
+
+
+<section id="welcome_images">
+  <section class="link">
+    <img src="https://i.postimg.cc/Pr5hQc4Y/40399270-l.jpg" alt="">
+  </section>
+  <section class="link">
+    <img src="https://i.postimg.cc/3wsJLBR7/shutterstock-2423625341.jpg" alt="">
+  </section>
+  <section class="link">
+    <img src="https://i.postimg.cc/y6vCxjHd/59a65dd495db920001d8420f-houston.jpg" alt="">
+  </section>
+</section>
+</center>

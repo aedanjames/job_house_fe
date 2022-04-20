@@ -1,4 +1,19 @@
 <center>
-<%= "Welcome #{@user_email}!"%>
-<p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-primary' %></p>
+
+<h4><%= "Welcome #{@user.email}!"%></h4>
+<p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-success' %></p>
+
+<ul class="list-group list-group-flush">
+<% @jobs.each do |job| %>
+    <li class="list-group-item">
+      <section class="text-decoration-underline">
+        <%= "#{job.city}, #{job.state}" %>
+      </section>
+        <h5>
+          <small><%=job.title%></small>
+          <span class="badge bg-success">$<%=job.salary %></span>
+        </h5>
+    </li>
+<% end %>
+</ul>
 </center>

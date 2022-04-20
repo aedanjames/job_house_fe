@@ -16,12 +16,12 @@ class JobService
       end
       parse_json(response)
     end
-  end
 
-  def save_job(job, user_email)
-    response = connection.post('jobs') do |faraday|
-      faraday.params[:email] = user_email
-      faraday.body(job.to_json)
+    def save_job(job, user_email)
+      response = connection.post('jobs') do |faraday|
+        faraday.params[:email] = user_email
+        faraday.params[:job] = job.to_json
+      end
     end
   end
 end

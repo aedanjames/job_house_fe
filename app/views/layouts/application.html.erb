@@ -27,10 +27,6 @@
     </div>
   </div>
 
-  <% if logged_in? %>
-    <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-dark" %>
-  <% end %>
-
       <%= yield %>
   </body>
 </html>
