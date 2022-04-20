@@ -1,4 +1,13 @@
 <center>
-<%= "Welcome #{@user_email}!"%>
+<%= "Welcome #{@user.email}!"%>
 <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-primary' %></p>
+
+<% @jobs.each do |job| %>
+<p>
+  <section class="text-decoration-underline">
+    <%= "#{job.city}, #{job.state}" %>
+  </section>
+    <%= "#{job.title} $#{job.salary} "%>
+  </p>
+<% end %>
 </center>

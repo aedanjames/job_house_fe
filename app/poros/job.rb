@@ -15,5 +15,6 @@ class Job
     @state = data[:attributes][:location][:state]
     @company = data[:attributes][:company]
     @contact = data[:attributes][:contact]
+    @api_job_id = data[:attributes][:api_job_id]
   end
 end

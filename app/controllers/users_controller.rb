@@ -11,8 +11,7 @@ class UsersController < ApplicationController
 
   def index
     @user = UserFacade.retrieve_user(session[:email])
-    @jobs = @user.jobs
-    binding.pry
+    @jobs = JobFacade.format_jobs(@user.jobs)
   end
 
   def logout
