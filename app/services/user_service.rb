@@ -1,7 +1,7 @@
 class UserService
   class << self
     def connection
-      Faraday.new(url: 'http://localhost:5000/api/v1/')
+      Faraday.new(url: ENV['backend_url'])
     end
 
     def parse_json(response)
