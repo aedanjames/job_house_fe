@@ -8,7 +8,8 @@ RSpec.describe UserService do
       expect(user).to be_a(Hash)
       expect(user[:id]).to be_a(String)
       expect(user[:attributes][:email]).to be_a(String)
-      expect(user[:relationships][:jobs][:data]).to be_a(Array)
+      expect(user[:attributes][:jobs]).to be_a(Array)
+
     end
   end
 end
