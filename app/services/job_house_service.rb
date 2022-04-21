@@ -13,15 +13,6 @@ class JobHouseService
       response = connection.get("jobs/#{job_id}/houses") do |faraday|
       end
       parse_json(response)
-
     end
-
-    # def jobs_by_location(state, city)
-    #   response = connection.get("search/jobs") do |faraday|
-    #     faraday.params['state'] = state
-    #     faraday.params['city'] = city
-    #   end
-    #   parse_json(response)
-    # end
   end
 end
