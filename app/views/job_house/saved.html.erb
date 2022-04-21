@@ -15,24 +15,28 @@
 <section class="p-3 mb-2 bg-info text-black"><h5>Homes You've Saved For The Position <h4><%= "#{@job.title}"%></h4></h5></section>
     <section class="row align-items-center">
       <section class="col">
-        <% @houses.each do |house| %>
-        <p>
-          <h5><strong><%= house.address%></strong><h5>
-          <h4><span class="badge bg-success">$<%=house.listing_price %></span></h4>
-          <section class="text-decoration-underline">Built In <%= house.year_built%></section>
-          <%= house.view%> view
-          <br>
-          <%= house.bedrooms%> bedrooms, <br>
-          <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
-          <br>
-          Contact <%= house.contact%> with inquiries! 
-          <%= button_to "Save House", "/jobs/#{@job.id}/#{house.mls_id}", method: :post, class: 'btn btn-info btn-sm'%>
+        <% if @houses.empty? %>
+          Oops! Looks Like You Haven't Saved Any Houses Yet. 
+        <% else %>
+          <% @houses.each do |house| %>
+          <p>
+            <h5><strong><%= house.address%></strong><h5>
+            <h4><span class="badge bg-success">$<%=house.listing_price %></span></h4>
+            <section class="text-decoration-underline">Built In <%= house.year_built%></section>
+            <%= house.view%> view
+            <br>
+            <%= house.bedrooms%> bedrooms, <br>
+            <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
+            <br>
+            Contact <%= house.contact%> with inquiries! 
+            <%= button_to "Save House", "/jobs/#{@job.id}/#{house.mls_id}", method: :post, class: 'btn btn-info btn-sm'%>
 
-          <% house.photos.each do |photo| %>
-            <img src=<%= "#{photo}" %>>
+            <% house.photos.each do |photo| %>
+              <img src=<%= "#{photo}" %>>
+            <% end %>
+          </p>
+          <br><br>
           <% end %>
-        </p>
-        <br><br>
         <% end %>
 </center>
       </section>

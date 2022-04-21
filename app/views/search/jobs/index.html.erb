@@ -1,4 +1,7 @@
 <center>
+<% if @jobs.empty? %>
+  <section class="p-3 mb-2 bg-info text-black"><h5>Oops! There Are No Houses Listed In <%= "#{@location}" %> Please Try Again</h5></section>
+<% else %>
 <% @jobs.each do |job| %>
   <%= form_with url: search_jobs_show_path, namespace: :search, method: :post, local: true do |f| %>
     <br>
@@ -24,6 +27,7 @@
     </p>
   <% end %>
   <br>
+<% end %>
 <% end %>
 </center>
 
