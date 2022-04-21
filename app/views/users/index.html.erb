@@ -13,7 +13,7 @@
         <h5><%= "#{job.city}, #{job.state}" %></h5>
         <section class="text-decoration-underline">Title</section>
         <h5>
-          <%= link_to "#{job.title}", "/jobs/#{job.id}", class:"text-info" %>
+          <%= link_to "#{job.title}", "/jobs/#{job.id}", class:"link-primary" %>
           <span class="badge bg-success">$<%=job.salary %></span>
         </h5>
     </li>
