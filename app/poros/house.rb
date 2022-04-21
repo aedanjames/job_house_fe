@@ -7,7 +7,8 @@ class House
               :half_baths,
               :full_baths,
               :view,
-              :year_built
+              :year_built,
+              :mls_id
 
 
   def initialize(data)

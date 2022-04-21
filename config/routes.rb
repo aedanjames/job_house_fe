@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get '/search/jobs', to: 'search#search_for_jobs'
 
+  post '/jobs/:job_id/:house_id', to: 'job_house#save_house'
   namespace :search do
     get '/jobs', to: 'search#search_for_jobs'
     get '/jobs/results', to: 'jobs#index'

@@ -31,7 +31,8 @@
           <%= house.bedrooms%> bedrooms, <br>
           <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
           <br>
-          Contact <%= house.contact%> with inquiries!
+          Contact <%= house.contact%> with inquiries! 
+          <%= button_to "Save House", "/jobs/#{@job.id}/#{house.mls_id}", method: :post, class: 'btn btn-info btn-sm'%>
         </center>
         </center>
           <% house.photos.each do |photo| %>
