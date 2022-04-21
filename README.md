@@ -8,6 +8,8 @@ ___
 * Rails
  * 5.2.7
 ___
+Fork and clone this repo, youll find an entire test suite setup in the spec folder to run the Rspec-rails tests
+___
 ### Walk Through
 #### the landing page
 + When first visiting the landing page, the user is directed to sign in Using Googles Oauth2
