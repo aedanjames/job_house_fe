@@ -15,6 +15,7 @@ class Search::JobsController < ApplicationController
   def save
     job = JobFacade.single_job(job_params)
     JobService.save_job(job, session[:email])
+
     redirect_to dashboard_path
   end
 private

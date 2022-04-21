@@ -22,5 +22,11 @@ class JobService
         faraday.params[:job] = job.to_json
       end
     end
+
+    def get_job(job_id)
+      response = connection.get("jobs/#{job_id}") do |faraday|
+      end 
+      parse_json(response)
+    end
   end
 end

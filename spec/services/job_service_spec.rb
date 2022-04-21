@@ -22,5 +22,36 @@ RSpec.describe JobService do
         expect(job[:attributes]).to have_key(:contact)
       end
     end
+
+    it 'saves jobs to databse', :vcr do
+      data = {
+          :id => '1',
+          :attributes => {
+            :company => "Twilio",
+            :salary => "100",
+            :location => {city: 'denver', state: 'colorado'},
+            :contact => "emailaddress@email.com",
+            :title => 'Software Developer'
+          }
+        }
+
+      job1 = Job.new(data)
+      expect(job1).to be_a(Job)
+    end
+
+    it '.get_job', :vcr do
+      job_data = JobService.get_job(1)
+      
+      expect(job_data).to be_a(Hash)
+      expect(job_data).to have_key(:data)
+      expect(job_data[:data]).to have_key(:id)
+      expect(job_data[:data]).to have_key(:type)
+      expect(job_data[:data]).to have_key(:attributes)
+      expect(job_data[:data][:attributes]).to have_key(:salary)
+      expect(job_data[:data][:attributes]).to have_key(:location)
+      expect(job_data[:data][:attributes]).to have_key(:id)
+      expect(job_data[:data][:attributes]).to have_key(:company)
+      expect(job_data[:data][:attributes]).to have_key(:contact)
+    end
   end
 end

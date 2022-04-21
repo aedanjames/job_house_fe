@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/jobs/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"541e0166253ddb22451808fea43cf9bd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e5067d94-e0b2-47c4-ae5b-19ec92aca3d4
+      X-Runtime:
+      - '0.001877'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"job","attributes":{"salary":57945,"location":"Harris
+        County, Texas","id":1,"company":"USA Labor Services","contact":"https://www.adzuna.com/land/ad/2906551756?se=9k2Ye_3A7BGLaPsWEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=86D4DB13BE211CE731BEB8BEAC45AFC845CB2A23","title":"Postal
+        Clerk"}}}'
+  recorded_at: Thu, 21 Apr 2022 16:46:32 GMT
+recorded_with: VCR 6.1.0

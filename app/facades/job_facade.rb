@@ -1,6 +1,25 @@
 class JobFacade
   class << self
 
+    def get_job(job_id)
+      yay = JobService.get_job(job_id)
+
+      split = yay[:data][:attributes][:location].split(',')
+      hash = {
+      city: split[0],
+      state: split[1]
+    }
+      job_data = {:id=> yay[:data][:id],
+        :attributes=>
+          {:salary=> yay[:data][:attributes][:salary],
+            :location=> hash,
+            :company=> yay[:data][:attributes][:company],
+            :title=> yay[:data][:attributes][:title],
+            :contact=> yay[:data][:attributes][:contact]}}
+
+      Job.new(job_data)
+    end
+
     def jobs_by_location(location)
       jobs_json = JobService.jobs_by_location(location)
       jobs_json[:data].map do |job_data|

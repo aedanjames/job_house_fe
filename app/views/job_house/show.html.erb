@@ -1,0 +1,40 @@
+
+<section class="container">
+  <section class="row align-items-start">
+    <section class="col">
+      <center>
+      <br><br>
+        <h4><small>Working For</small> <%= @job.company %></h4>
+        <h4><small>As A </small><%= "#{@job.title}"%></h4>
+        <h2><small>Earning</small> <span class="badge bg-success">$<%=@job.salary %></span></h2>
+        <h4><small>Can Afford You These Homes In</small> <%="#{@job.city}, #{@job.state}"%><h4>
+        <br>
+      </center>
+    </section>
+
+    <section class="row align-items-center">
+      <section class="col">
+        <% @houses.each do |house| %>
+        <p>
+        <center>
+          <h5><strong><%= house.address%></strong><h5>
+          <h3><span class="badge bg-success">$<%=house.listing_price %></span></h3>
+          <section class="text-decoration-underline">Built In <%= house.year_built%></section>
+        <center>
+          <%= house.view%> view
+          <br>
+          <%= house.bedrooms%> bedrooms, <br>
+          <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
+          <br>
+          Contact <%= house.contact%> with inquiries!
+        </center>
+        </center>
+          <% house.photos.each do |photo| %>
+            <img src=<%= "#{photo}" %>>
+          <% end %>
+        </p>
+        <br><br>
+        <% end %>
+      </section>
+  </section>
+  

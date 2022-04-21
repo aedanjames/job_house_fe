@@ -16,7 +16,6 @@
 
 #welcome_images {
   width: 100vw;
-  background: white;
   color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -37,8 +36,22 @@
   font-family: copperplate, fantasy;
 }
 
-body {
-  // background: black;
-  // color: white;
+html,body {
+	background-image: image-url('/assets/background.jpg'); 
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
   font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 0.1rem;
 }
