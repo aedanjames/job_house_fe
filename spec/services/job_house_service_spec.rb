@@ -21,7 +21,7 @@ RSpec.describe 'JobHouseService' do
         expect(house[:attributes][:year_built]).to be_an(Integer)
         expect(house[:attributes][:photos]).to be_an(Array)
         expect(house[:attributes][:photos][0]).to be_an(String)
-      end 
+      end
     end
   end
 end

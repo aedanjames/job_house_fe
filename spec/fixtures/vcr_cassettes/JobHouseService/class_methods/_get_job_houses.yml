@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 179c2dc1-39a0-498e-bbe8-229a7f269c3e
+      - 193be52a-0bdc-46d8-8055-09884536098c
       X-Runtime:
-      - '1.147662'
+      - '1.165349'
       Transfer-Encoding:
       - chunked
     body:
@@ -38,5 +38,5 @@ http_interactions:
         South Wilbur Ave Pl #2035","contact":"agent@example.com","api_house_id":1005165,"bedrooms":1,"half_baths":3,"full_baths":6,"view":"None","year_built":1955,"photos":["https://s3-us-west-2.amazonaws.com/cdn.simplyrets.com/properties/trial/home4.jpg","https://s3-us-west-2.amazonaws.com/cdn.simplyrets.com/properties/trial/home-inside-4.jpg"]}},{"id":"1005229","type":"job_house","attributes":{"id":1005229,"list_price":80658,"address":"92270
         South 2991 Bryant ST Pl #1573","contact":"agent@example.com","api_house_id":1005229,"bedrooms":1,"half_baths":6,"full_baths":2,"view":"Neighborhood","year_built":2008,"photos":["https://s3-us-west-2.amazonaws.com/cdn.simplyrets.com/properties/trial/home4.jpg","https://s3-us-west-2.amazonaws.com/cdn.simplyrets.com/properties/trial/home-inside-4.jpg"]}},{"id":"1005246","type":"job_house","attributes":{"id":1005246,"list_price":1066737,"address":"20349
         North LOST SPRING Fwy #27536","contact":"agent@example.com","api_house_id":1005246,"bedrooms":2,"half_baths":1,"full_baths":1,"view":"None","year_built":1979,"photos":["https://s3-us-west-2.amazonaws.com/cdn.simplyrets.com/properties/trial/home16.jpg","https://s3-us-west-2.amazonaws.com/cdn.simplyrets.com/properties/trial/home-inside-16.jpg"]}}]}'
-  recorded_at: Thu, 21 Apr 2022 00:01:55 GMT
+  recorded_at: Wed, 20 Apr 2022 23:56:21 GMT
 recorded_with: VCR 6.1.0

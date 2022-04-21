@@ -1,1 +1,41 @@
-<p>Job show page with matching houses</p>
+
+<section class="container">
+  <section class="row align-items-start">
+    <section class="col">
+      <center>
+      <br><br>
+        <section class="text-decoration-underline">Postion Title</section>
+        <h3><%= "#{@job.title}" %></h3>
+        <section class="text-decoration-underline">Company</section>
+        <h4><%= "#{@job.company} in #{@job.city}, #{@job.state}" %></h4> 
+        <br>
+        <h5><span class="badge bg-success">$<%=@job.salary %></span>
+      </center>
+    </section>
+
+    <section class="row align-items-center">
+      <section class="col">
+        <% @houses.each do |house| %>
+        <p>
+        <center>
+          <strong><%= house.address%></strong>
+          <h5><span class="badge bg-success">$<%=house.listing_price %></span></h5>
+          <section class="text-decoration-underline">Built In <%= house.year_built%></section>
+        </center>
+          <% house.photos.each do |photo| %>
+            <img src=<%= "#{photo}" %>>
+          <% end %>
+        </p>
+        <center>
+          <%= house.view%> view
+          <br>
+          <%= house.bedrooms%> bedrooms, 
+          <%= "Full Bath(s): #{house.full_baths}, Half Bath(s): #{house.half_baths}" %>
+          <br>
+          Contact <%= house.contact%> with inquiries!
+        </center>
+        <br><br>
+        <% end %>
+      </section>
+  </section>
+  
