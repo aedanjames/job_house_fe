@@ -3,11 +3,16 @@
   <section class="row align-items-start">
     <section class="col">
       <center>
-      <br><br>
-        <h4><small>Working For</small> <%= @job.company %></h4>
-        <h4><small>As A </small><%= "#{@job.title}"%></h4>
-        <h2><small>Earning</small> <span class="badge bg-success">$<%=@job.salary %></span></h2>
+      <br>
+        <section class="text-decoration-underline">Working For</section>
+        <h4><%= @job.company %></h4>
+        <section class="text-decoration-underline">As A</section>
+        <h4><%= "#{@job.title}"%></h4>
+        <section class="text-decoration-underline">Earning</section>
+        <h3><span class="badge bg-success">$<%=@job.salary %></span></h3>
         <h4><small>Can Afford You These Homes In</small> <%="#{@job.city}, #{@job.state}"%><h4>
+        <%= button_to "Apply!", "#{@job.contact}", class: "btn btn-info"%>
+        <section class="fs-6">*Utilizing 30% of your monthly income towards mortgage payments*</section>
         <br>
       </center>
     </section>
@@ -18,7 +23,7 @@
         <p>
         <center>
           <h5><strong><%= house.address%></strong><h5>
-          <h3><span class="badge bg-success">$<%=house.listing_price %></span></h3>
+          <h4><span class="badge bg-success">$<%=house.listing_price %></span></h4>
           <section class="text-decoration-underline">Built In <%= house.year_built%></section>
         <center>
           <%= house.view%> view
