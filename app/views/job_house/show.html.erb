@@ -16,7 +16,7 @@
           <section class="text-decoration-underline">Earning</section>
           <h3><span class="badge bg-success">$<%=@job.salary %></span></h3>
           <h4><small>Can Afford You These Homes In</small> <%="#{@job.city}, #{@job.state}"%><h4>
-          <%= button_to "Apply!", "#{@job.contact}", class: "btn btn-info"%>
+          <%= link_to "Apply!", "#{@job.contact}", class: "btn btn-info"%>
           <section class="fs-6">*Utilizing 30% of your monthly income towards mortgage payments*</section>
           <br>
         </center>

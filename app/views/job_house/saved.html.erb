@@ -7,7 +7,7 @@
         <section class="text-decoration-underline">Salary</section>
         <h3><span class="badge bg-success">$<%=@job.salary %></span></h3>
         <h5><small>Working In </small> <%="#{@job.city}, #{@job.state}"%><h5>
-        <%= button_to "Apply!", "#{@job.contact}", class: "btn btn-info"%><br>
+        <%= link_to "Apply!", "#{@job.contact}", class: "btn btn-info"%><br>
         <section class="fs-6">*Utilizing 30% of your monthly income towards mortgage payments*</section>
         <br>
     </section>
