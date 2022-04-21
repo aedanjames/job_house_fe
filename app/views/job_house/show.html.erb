@@ -4,12 +4,11 @@
     <section class="col">
       <center>
       <br><br>
-        <section class="text-decoration-underline">Postion Title</section>
-        <h3><%= "#{@job.title}" %></h3>
-        <section class="text-decoration-underline">Company</section>
-        <h4><%= "#{@job.company} in #{@job.city}, #{@job.state}" %></h4> 
+        <h4><small>Working For</small> <%= @job.company %></h4>
+        <h4><small>As A </small><%= "#{@job.title}"%></h4>
+        <h2><small>Earning</small> <span class="badge bg-success">$<%=@job.salary %></span></h2>
+        <h4><small>Can Afford You These Homes In</small> <%="#{@job.city}, #{@job.state}"%><h4>
         <br>
-        <h5><span class="badge bg-success">$<%=@job.salary %></span>
       </center>
     </section>
 
@@ -18,8 +17,8 @@
         <% @houses.each do |house| %>
         <p>
         <center>
-          <strong><%= house.address%></strong>
-          <h5><span class="badge bg-success">$<%=house.listing_price %></span></h5>
+          <h5><strong><%= house.address%></strong><h5>
+          <h3><span class="badge bg-success">$<%=house.listing_price %></span></h3>
           <section class="text-decoration-underline">Built In <%= house.year_built%></section>
         </center>
           <% house.photos.each do |photo| %>
@@ -29,8 +28,8 @@
         <center>
           <%= house.view%> view
           <br>
-          <%= house.bedrooms%> bedrooms, 
-          <%= "Full Bath(s): #{house.full_baths}, Half Bath(s): #{house.half_baths}" %>
+          <%= house.bedrooms%> bedrooms, <br>
+          <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
           <br>
           Contact <%= house.contact%> with inquiries!
         </center>
