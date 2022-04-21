@@ -9,6 +9,7 @@ ___
  * 5.2.7
 ___
 Fork and clone this repo, youll find an entire test suite setup in the spec folder to run the Rspec-rails tests
+to run the test files in your terminal run `bundle exec rspec`
 ___
 ### Walk Through
 #### the landing page
