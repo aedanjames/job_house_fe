@@ -3,7 +3,6 @@ class JobFacade
 
     def get_job(job_id)
       yay = JobService.get_job(job_id)
-
       split = yay[:data][:attributes][:location].split(',')
       hash = {
       city: split[0],

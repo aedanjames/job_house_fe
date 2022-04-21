@@ -7,16 +7,26 @@
 <ul class="list-group list-group-flush">
 <% @jobs.each do |job| %>
     <li class="list-group-item">
-      <section class="text-decoration-underline">
-        Location<br>
+      <section class="text-decoration-underline">Title</section>
+        <h5><%= job.title %></h5>
+      <section class="text-decoration-underline">Location<br>
       </section>
         <h5><%= "#{job.city}, #{job.state}" %></h5>
-        <section class="text-decoration-underline">Title</section>
-        <h5>
-          <%= link_to "#{job.title}", "/jobs/#{job.id}", class:"link-primary" %>
-          <span class="badge bg-success">$<%=job.salary %></span>
-        </h5>
-          <%= button_to "Delete Job", "/jobs/#{job.id}", method: :delete, class: 'btn btn-danger btn-sm'%>
+        <h4><span class="badge bg-success">$<%=job.salary %></span></h4>
+
+<section class="container">
+  <section class="row align-items-start">
+    <section class="col">
+      <%= button_to "Find Homes", "/jobs/#{job.id}", method: :get, class:"btn btn-dark" %>
+    </section>
+    <section class="col">
+      <%= button_to "Delete Job", "/jobs/#{job.id}", method: :delete, class: 'btn btn-danger btn-sm'%>
+    </section>
+    <section class="col">
+      <%= button_to "Saved Homes", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark" %>
+    </section>
+  </section>
+</section>
     </li>
 <% end %>
 </ul>
