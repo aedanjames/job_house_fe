@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   get '/search/jobs', to: 'search#search_for_jobs'
 
+  get '/jobs/:job_id/houses/saved', to: 'job_house#saved'
+
+  post '/jobs/:job_id/:house_id', to: 'job_house#save_house'
   namespace :search do
     get '/jobs', to: 'search#search_for_jobs'
     get '/jobs/results', to: 'jobs#index'
@@ -17,5 +20,5 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'users#logout'
 
-  resources :jobs, only: [:show], controller: :job_house
+  resources :jobs, only: [:show, :destroy], controller: :job_house
 end

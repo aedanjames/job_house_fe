@@ -1,12 +1,9 @@
 <section class="container">
-  <section class="row">
-    <section class="col-9">
-      <p><%= button_to 'Log In With Google', '/auth/google_oauth2', method: :get, class: "btn btn-primary" %><p>
-    </section>
-    <section class="col-3">
-      <p><%= button_to 'Sign Up With Google', '/auth/google_oauth2', method: :get, class: "btn btn-primary" %><p>
-    </section>
-  </section>
+<center>
+  <% if logged_in? == false %>
+    <p><%= button_to 'Log In/Sign Up With Google', '/auth/google_oauth2', method: :get, class: "btn btn-info" %><p>
+  <% end %>
+</center>
 </section>
 
 <center>
@@ -21,7 +18,7 @@
   </section>
   <section class="link">
     <h3>Live Life</h3>
-    <img src="https://i.postimg.cc/8cWxnhdh/3.jpg" alt="">
+    <img src="https://i.postimg.cc/NfCxkH2t/1-L21v-Lj-Ccw8n2b-Km-HEV-bg.jpg" alt="">
   </section>
 </section>
 </center>

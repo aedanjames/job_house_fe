@@ -25,8 +25,14 @@ class JobService
 
     def get_job(job_id)
       response = connection.get("jobs/#{job_id}") do |faraday|
-      end 
+      end
       parse_json(response)
     end
+
+    def delete_job(job_id, user_id)
+      response = connection.delete("user/jobs/#{job_id}") do |faraday|
+        faraday.params[:user_id] = user_id
+      end
+    end 
   end
 end

@@ -7,10 +7,12 @@ class House
               :half_baths,
               :full_baths,
               :view,
-              :year_built
+              :year_built,
+              :mls_id
 
 
   def initialize(data)
+    @mls_id = data[:id]
     @listing_price = data[:attributes][:list_price]
     @address = data[:attributes][:address]
     @contact = data[:attributes][:contact]
