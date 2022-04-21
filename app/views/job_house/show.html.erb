@@ -20,11 +20,6 @@
           <h5><strong><%= house.address%></strong><h5>
           <h3><span class="badge bg-success">$<%=house.listing_price %></span></h3>
           <section class="text-decoration-underline">Built In <%= house.year_built%></section>
-        </center>
-          <% house.photos.each do |photo| %>
-            <img src=<%= "#{photo}" %>>
-          <% end %>
-        </p>
         <center>
           <%= house.view%> view
           <br>
@@ -33,6 +28,11 @@
           <br>
           Contact <%= house.contact%> with inquiries!
         </center>
+        </center>
+          <% house.photos.each do |photo| %>
+            <img src=<%= "#{photo}" %>>
+          <% end %>
+        </p>
         <br><br>
         <% end %>
       </section>
