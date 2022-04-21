@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:5000/api/v1/jobs?email=emailaddress@email.com&job=%7B%22id%22:%221%22,%22salary%22:%22100%22,%22title%22:null,%22city%22:%22denver%22,%22state%22:%22colorado%22,%22company%22:%22Twilio%22,%22contact%22:%22emailaddress@email.com%22,%22api_job_id%22:null%7D
+    uri: http://localhost:5000/api/v1/jobs?email=emailaddress@email.com&job=%7B%22id%22:%221%22,%22salary%22:%22100%22,%22title%22:%22Software%20Developer%22,%22city%22:%22denver%22,%22state%22:%22colorado%22,%22company%22:%22Twilio%22,%22contact%22:%22emailaddress@email.com%22,%22api_job_id%22:null%7D
     body:
       encoding: UTF-8
       string: ''
@@ -23,15 +23,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 26a79bb0-4201-4862-b235-ac8cd23c80f9
+      - d51696bf-87f8-4445-8f38-cc5cdd2394ea
       X-Runtime:
-      - '0.060297'
+      - '0.110923'
       Content-Length:
       - '9953'
     body:
       encoding: UTF-8
       string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cNoMethodError:
-        undefined method `id'' for nil:NilClass\u003e","traces":{"Application Trace":[{"id":0,"trace":"app/controllers/api/v1/jobs_controller.rb:24:in
+        undefined method `id'' for nil:NilClass\u003e","traces":{"Application Trace":[{"id":0,"trace":"app/controllers/api/v1/jobs_controller.rb:33:in
         `create''"}],"Framework Trace":[{"id":1,"trace":"actionpack (5.2.7) lib/action_controller/metal/basic_implicit_render.rb:6:in
         `send_action''"},{"id":2,"trace":"actionpack (5.2.7) lib/abstract_controller/base.rb:194:in
         `process_action''"},{"id":3,"trace":"actionpack (5.2.7) lib/action_controller/metal/rendering.rb:30:in
@@ -83,7 +83,7 @@ http_interactions:
         lib/puma/server.rb:706:in `handle_request''"},{"id":50,"trace":"puma (3.12.6)
         lib/puma/server.rb:476:in `process_client''"},{"id":51,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":52,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/controllers/api/v1/jobs_controller.rb:24:in
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/controllers/api/v1/jobs_controller.rb:33:in
         `create''"},{"id":1,"trace":"actionpack (5.2.7) lib/action_controller/metal/basic_implicit_render.rb:6:in
         `send_action''"},{"id":2,"trace":"actionpack (5.2.7) lib/abstract_controller/base.rb:194:in
         `process_action''"},{"id":3,"trace":"actionpack (5.2.7) lib/action_controller/metal/rendering.rb:30:in
@@ -136,5 +136,5 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":51,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":52,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Wed, 20 Apr 2022 21:34:59 GMT
+  recorded_at: Thu, 21 Apr 2022 15:47:44 GMT
 recorded_with: VCR 6.1.0
