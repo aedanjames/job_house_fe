@@ -36,4 +36,31 @@ RSpec.describe JobFacade do
 
     expect(job).to be_an_instance_of(Job)
   end
+
+  it '.format_jobs', :vcr do
+    jobs = [
+      {
+        :id => 1,
+        :salary => 100,
+        :location => {:city => 'denver', :state => 'colorado'},
+        :company => 'turing',
+        :title => 'software dev',
+        :contact => 'email@email.com'
+      },
+      {
+        :id => 1,
+        :salary => 100,
+        :location => {:city => 'denver', :state => 'colorado'},
+        :company => 'turing',
+        :title => 'software dev',
+        :contact => 'email@email.com'
+      }
+    ]
+
+    job_poros = JobFacade.format_jobs(jobs)
+
+    job_poros.each do |job|
+      expect(job).to be_an_instance_of(Job)
+    end
+  end
 end
