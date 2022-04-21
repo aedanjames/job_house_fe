@@ -18,4 +18,9 @@ class JobHouseController < ApplicationController
     JobHouseService.save_house(params[:job_id], params[:house_id], session[:email])
     redirect_to dashboard_path
   end
+
+  def delete_house
+    JobHouseService.delete_house(params[:job_id], params[:house_id], session[:email])
+    redirect_to "/jobs/#{params[:job_id]}/houses/saved"
+  end
 end

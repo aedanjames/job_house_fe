@@ -29,5 +29,13 @@ class JobHouseService
         faraday.params[:email] = user_email
       end
     end 
+
+    def delete_house(job_id, house_id, user_email)
+      response = connection.delete("jobs/houses") do |faraday|
+        faraday.params[:email] = user_email
+        faraday.params[:house_id] = house_id
+        faraday.params[:job_id] = job_id
+      end
+    end
   end
 end

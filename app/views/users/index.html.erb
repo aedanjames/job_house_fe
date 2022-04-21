@@ -2,7 +2,9 @@
 <br>
 <h4><%= "Welcome #{@user.email}!"%></h4>
 <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
-
+<% if @jobs.empty? %>
+  <section class="p-4 mb-2 bg-info text-black"><h5>You Haven't Saved Any Jobs Yet</h5></section>
+<% else %>
 <section class="p-3 mb-2 bg-info text-black"><h5>Jobs You've Saved</h5></section>
 <ul class="list-group list-group-flush">
 <% @jobs.each do |job| %>
@@ -28,6 +30,7 @@
   </section>
 </section>
     </li>
+<% end %>
 <% end %>
 </ul>
 </center>

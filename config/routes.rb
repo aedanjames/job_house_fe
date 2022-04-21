@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/jobs/:job_id/houses/saved', to: 'job_house#saved'
 
+  delete '/jobs/:job_id/houses/:house_id', to: 'job_house#delete_house'
+
   post '/jobs/:job_id/:house_id', to: 'job_house#save_house'
   namespace :search do
     get '/jobs', to: 'search#search_for_jobs'
