@@ -16,6 +16,7 @@
           <%= link_to "#{job.title}", "/jobs/#{job.id}", class:"link-primary" %>
           <span class="badge bg-success">$<%=job.salary %></span>
         </h5>
+          <%= button_to "Delete Job", "/jobs/#{job.id}", method: :delete, class: 'btn btn-danger btn-sm'%>
     </li>
 <% end %>
 </ul>

@@ -11,6 +11,7 @@ class House
 
 
   def initialize(data)
+    @mls_id = data[:id]
     @listing_price = data[:attributes][:list_price]
     @address = data[:attributes][:address]
     @contact = data[:attributes][:contact]

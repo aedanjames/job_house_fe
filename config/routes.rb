@@ -17,5 +17,5 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'users#logout'
 
-  resources :jobs, only: [:show], controller: :job_house
+  resources :jobs, only: [:show, :destroy], controller: :job_house
 end
