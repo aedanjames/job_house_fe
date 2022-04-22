@@ -6,6 +6,8 @@ Rails.application.configure do
   config.serve_static_assets = true
   config.assets.compile = true
   config.assets.digest = true
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
