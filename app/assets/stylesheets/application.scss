@@ -37,7 +37,7 @@
 }
 
 html,body {
-	background-image: image-url('/assets/background.jpg'); 
+  background-image: image-url("background.jpg");
 	height: 100%;
 	width: 100%;
 	margin: 0;
