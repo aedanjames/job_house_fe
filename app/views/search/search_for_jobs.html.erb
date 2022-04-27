@@ -1,9 +1,14 @@
 <br>
 <center>
-  <section class="mb-3, shadow-sm p-3 mb-5 ">
+  <section class="mb-3, shadow-sm p-3 mb-3 ">
     <%= form_with url: search_jobs_results_path, method: :get, local: true do |form| %>
-      <%= form.label :location, 'Enter Desired Job Location:', class: "form-label, text-decoration-underline" %>
-      <%= form.text_field :location %>
+      <%= form.label :location, 'Enter Desired Job Location:', class: "form-label, text-decoration-underline", required: true %>
+      <%= form.text_field :location %><br><br>
+      <section class="text-decoration-underline">Optional</section>
+      <%= form.label :what, 'Enter Desired Job Keywords:', class: "form-label, text-decoration-underline" %>
+      <%= form.text_field :what %><br><br>
+      <%= form.label :min_salary, 'Enter Minimum Desired Salary', class: "form-label, text-decoration-underline" %>
+      <%= form.text_field :min_salary %><br><br>
       <%= form.submit 'Search', class: "btn btn-primary" %>
     <% end %>
     </p>

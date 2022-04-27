@@ -3,7 +3,11 @@ class Search::JobsController < ApplicationController
 
   def index
     @location = params[:location]
-    @jobs = JobFacade.jobs_by_location(params[:location])
+    if  params[:location].present? && params[:what].present? || params[:salary_min].present?
+      @jobs = JobFacade.jobs_by_location(params[:location], params[:what], params[:salary_min])
+    else 
+      @jobs = JobFacade.jobs_by_location(params[:location])
+    end 
   end
 
   def show
