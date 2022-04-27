@@ -1,6 +1,6 @@
 <br>
 <center>
-  <section class="mb-3, shadow-sm p-3 mb-3 ">
+  <section class="mb-3, shadow-sm p3 mb2 ">
     <%= form_with url: search_jobs_results_path, method: :get, local: true do |form| %>
       <%= form.label :location, 'Enter Desired Job Location:', class: "form-label, text-decoration-underline", required: true %>
       <%= form.text_field :location %><br><br>
@@ -9,20 +9,26 @@
       <%= form.text_field :what %><br><br>
       <%= form.label :min_salary, 'Enter Minimum Desired Salary', class: "form-label, text-decoration-underline" %>
       <%= form.text_field :min_salary %><br><br>
-      <%= form.submit 'Search', class: "btn btn-primary" %>
+      <%= form.submit 'Search', class: "btn btn-info" %>
     <% end %>
     </p>
   </section>
 
   <section id="welcome_images">
     <section class="link">
-      <img src="https://i.postimg.cc/Pr5hQc4Y/40399270-l.jpg" alt="">
+      <section class="shadow-lg p-1">
+        <img src="https://i.postimg.cc/Pr5hQc4Y/40399270-l.jpg" alt="">
+      </section>
     </section>
     <section class="link">
-      <img src="https://i.postimg.cc/3wsJLBR7/shutterstock-2423625341.jpg" alt="">
+      <section class="shadow-lg p-1">
+        <img src="https://i.postimg.cc/3wsJLBR7/shutterstock-2423625341.jpg" alt="">
+      </section>
     </section>
     <section class="link">
-      <img src="https://i.postimg.cc/y6vCxjHd/59a65dd495db920001d8420f-houston.jpg" alt="">
+      <section class="shadow-lg p-1">
+        <img src="https://i.postimg.cc/y6vCxjHd/59a65dd495db920001d8420f-houston.jpg" alt="">
+      </section>
     </section>
   </section>
 </center>
