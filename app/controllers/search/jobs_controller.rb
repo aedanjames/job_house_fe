@@ -1,5 +1,5 @@
 class Search::JobsController < ApplicationController
-  before_action :authorized
+  before_action :authorized, except: [:index, :show, :job_params]
 
   def index
     @location = params[:location]

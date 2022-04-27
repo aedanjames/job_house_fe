@@ -14,6 +14,19 @@
  *= require_self
  */
 
+.navbar {
+  background: #18181b
+}
+
+.navbar-toggler-icon{
+  background-image: image-url("jobhousetoggler.png");
+}
+
+.nav-item{
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 #welcome_images {
   width: 100vw;
   color: black;

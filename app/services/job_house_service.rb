@@ -18,9 +18,9 @@ class JobHouseService
       response = connection.get("jobs/houses") do |faraday|
         faraday.params[:job_id] = job_id
         faraday.params[:email] = user_email
-      end 
+      end
       parse_json(response)
-    end 
+    end
 
     def save_house(job_id, house_mls_id, user_email)
       response = connection.post("jobs/houses") do |faraday|
@@ -28,7 +28,7 @@ class JobHouseService
         faraday.params[:job_id] = job_id
         faraday.params[:email] = user_email
       end
-    end 
+    end
 
     def delete_house(job_id, house_id, user_email)
       response = connection.delete("jobs/houses") do |faraday|
