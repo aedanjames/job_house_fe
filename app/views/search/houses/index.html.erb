@@ -1,0 +1,36 @@
+<center>
+<% if @houses.empty? %>
+  <section class="p-3 mb-2 bg-info text-black"><h5>Oops! There Are No Homes To Show In <%= "#{@location}" %> Please Try Again</h5></section>
+    <section class="mb-3, shadow-sm p-3 mb-5">
+    <%= form_with url: search_houses_results_path, method: :get, local: true do |form| %>
+      <%= form.label :location, 'Enter Desired House Location:', class: "form-label, text-decoration-underline", required: true %>
+      <%= form.text_field :location %><br><br>
+      <%= form.label :max_price, 'Enter Maximum Price For House:', class: "form-label, text-decoration-underline" %>
+      <%= form.text_field :max_price %><br><br>
+      <%= form.submit 'Search', class: "btn btn-info" %>
+    <% end %>
+    </p>
+  </section>
+<% else %>
+  <% @houses.each do |house| %>
+    <p>
+    <center>
+      <h5><strong><%= house.address%></strong><h5>
+      <h4><span class="badge bg-success">$<%=house.listing_price %></span></h4>
+      <section class="text-decoration-underline">Built In <%= house.year_built%></section>
+    <center>
+      <%= house.view%> view
+      <br>
+      <%= house.bedrooms%> bedrooms, <br>
+      <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
+      <br>
+      Contact <%= house.contact%> with inquiries!
+    </center>
+      <% house.photos.each do |photo| %>
+        <img src=<%= "#{photo}" %>>
+      <% end %>
+    </p>
+    <br><br>
+  <% end %>
+<% end %>
+</center>
