@@ -2,10 +2,10 @@
 <center>
   <section class="mb-3, shadow-sm p3 mb2 ">
     <%= form_with url: search_houses_results_path, method: :get, local: true do |form| %>
-      <%= form.label :location, 'Enter Desired House Location:', class: "form-label, text-decoration-underline", required: true %>
-      <%= form.text_field :location %><br><br>
+      <%= form.label :location, 'Enter Desired House Location:', class: "form-label, text-decoration-underline" %>
+      <%= form.text_field :location, required: true %><br><br>
       <%= form.label :max_price, 'Enter Maximum Price For House:', class: "form-label, text-decoration-underline" %>
-      <%= form.text_field :max_price %><br><br>
+      <%= form.text_field :max_price, required: true %><br><br>
       <%= form.submit 'Search', class: "btn btn-info" %>
     <% end %>
     </p>

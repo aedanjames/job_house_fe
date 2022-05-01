@@ -3,7 +3,7 @@
   <section class="mb-3, shadow-sm p3 mb2 ">
     <%= form_with url: search_jobs_results_path, method: :get, local: true do |form| %>
       <%= form.label :location, 'Enter Desired Job Location:', class: "form-label, text-decoration-underline", required: true %>
-      <%= form.text_field :location %><br><br>
+      <%= form.text_field :location, required: true %><br><br>
       <section class="text-decoration-underline">Optional</section>
       <%= form.label :what, 'Enter Desired Job Keywords:', class: "form-label, text-decoration-underline" %>
       <%= form.text_field :what %><br><br>
