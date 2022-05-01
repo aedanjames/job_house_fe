@@ -12,7 +12,7 @@ class HouseService
     def get_houses(location, max_price)
       response = connection.get('houses') do |faraday|
         faraday.params[:where] = location
-        faraday.params[:max_price] = max_price.to_i * 100
+        faraday.params[:max_price] = max_price
       end
       parse_json(response)
     end
