@@ -9,7 +9,7 @@ class JobService
       JSON.parse(response.body, symbolize_names: true)
     end
 
-    def jobs_by_location(location, what, salary_min)
+    def jobs_by_location(location, what = nil, salary_min = nil)
       response = connection.get('jobs') do |faraday|
         faraday.params[:where] = location
         faraday.params[:what] = what unless what == nil

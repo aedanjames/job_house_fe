@@ -21,19 +21,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"541e0166253ddb22451808fea43cf9bd"
+      - W/"b53449f314aa2d8f6f0c7a2b4791fc96"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e5067d94-e0b2-47c4-ae5b-19ec92aca3d4
+      - 7f17d169-0e6d-4b06-be26-bf15df84516a
       X-Runtime:
-      - '0.001877'
+      - '0.005332'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"job","attributes":{"salary":57945,"location":"Harris
-        County, Texas","id":1,"company":"USA Labor Services","contact":"https://www.adzuna.com/land/ad/2906551756?se=9k2Ye_3A7BGLaPsWEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=86D4DB13BE211CE731BEB8BEAC45AFC845CB2A23","title":"Postal
-        Clerk"}}}'
-  recorded_at: Thu, 21 Apr 2022 16:46:32 GMT
+      string: '{"data":{"id":"1","type":"job","attributes":{"salary":336000,"location":"Harris
+        County, Texas","id":1,"company":"KPMG","contact":"https://www.adzuna.com/land/ad/3032397438?se=7GFzngTB7BGN22UsGHPMqw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=9D709B9314CB66D996A0F0D4FD5DD2D31BFFE728","title":"Sr.
+        Associate, Life Sciences Consulting- Low Code/Appian"}}}'
+  recorded_at: Sun, 01 May 2022 14:41:14 GMT
 recorded_with: VCR 6.1.0

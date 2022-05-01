@@ -21,25 +21,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"68501dca3b0fbd59a333582ac51e3084"
+      - W/"1ee23e34e6fdc6bdef145991607c99dc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bd8f9eae-d4b7-4548-a4bd-6c6847813a8d
+      - 639c9aff-3734-47ab-82bc-1fe2c14fd194
       X-Runtime:
-      - '0.002653'
+      - '0.011758'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"eturambi95@gmail.com","jobs":[{"id":1,"salary":57945,"company":"USA
-        Labor Services","location":{"city":"Harris County","state":" Texas"},"contact":"https://www.adzuna.com/land/ad/2906551756?se=9k2Ye_3A7BGLaPsWEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=86D4DB13BE211CE731BEB8BEAC45AFC845CB2A23","api_job_id":2906551756,"title":"Postal
-        Clerk"},{"id":2,"salary":336000,"company":"Invesco Ltd.","location":{"city":"Harris
-        County","state":" Texas"},"contact":"https://www.adzuna.com/land/ad/3025995353?se=pM0veP_A7BGLaPsWEt2eFw\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=C8601D752592ED6A2D4EA651097DDA585E61A365","api_job_id":3025995353,"title":"North
-        America Head of Fund Reporting"},{"id":4,"salary":336000,"company":"DaVita
-        Inc.","location":{"city":"Harris County","state":" Texas"},"contact":"https://www.adzuna.com/land/ad/3056671957?se=rJpmiovB7BGP_jr6d04pBg\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=86E496015E9B698F020098100BA5CF6A3CC73E5B","api_job_id":3056671957,"title":"Group
-        Finance Director (GFD)"},{"id":5,"salary":81600,"company":"Cross Country Nurses","location":{"city":"Harris
-        County","state":" Texas"},"contact":"https://www.adzuna.com/land/ad/3030139984?se=YGtjuIvB7BGB0CGJt7GWCg\u0026utm_medium=api\u0026utm_source=5e859b54\u0026v=C3DAEE41DC5CB9AFBCB3C39AFCE907E2CE2969AE","api_job_id":3030139984,"title":"Allied
-        Health - Surgical Technologist job in Houston, TX"}]}}}'
-  recorded_at: Thu, 21 Apr 2022 16:41:53 GMT
+      string: '{"data":{"id":"2","type":"user","attributes":{"email":"eturambi95@gmail.com","jobs":[]}}}'
+  recorded_at: Sun, 01 May 2022 14:41:16 GMT
 recorded_with: VCR 6.1.0
