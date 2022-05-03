@@ -19,4 +19,9 @@ class UsersController < ApplicationController
     session.destroy
     redirect_to root_path
   end
+
+  def email_realtor
+    RealtorMailer.email_realtor(params[:realtor_contact], params[:mls_id], session[:email]).deliver
+    redirect_to dashboard_path
+  end
 end

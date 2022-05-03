@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   delete '/jobs/:job_id/houses/:house_id', to: 'job_house#delete_house'
   post '/jobs/:job_id/:house_id', to: 'job_house#save_house'
 
+  get '/houses/:mls_id/:realtor_contact', to: 'users#email_realtor'
   namespace :search do
     get '/jobs', to: 'search#search_for_jobs'
     get '/jobs/results', to: 'jobs#index'
