@@ -19,8 +19,8 @@ class JobFacade
       Job.new(job_data)
     end
 
-    def jobs_by_location(location)
-      jobs_json = JobService.jobs_by_location(location)
+    def jobs_by_location(location, what = nil, salary_min = nil)
+      jobs_json = JobService.jobs_by_location(location, what, salary_min)
       jobs_json[:data].map do |job_data|
         Job.new(job_data)
       end
