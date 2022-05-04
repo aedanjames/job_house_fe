@@ -1,15 +1,17 @@
-<section class="container">
 <center>
-  <% if logged_in? == false %>
-    <p><%= button_to 'Log In/Sign Up With Google', '/auth/google_oauth2', method: :get, class: "btn btn-info" %><p>
-  <% end %>
+<section class="mb-3, shadow-sm p-3 mb-5 ">
+  <section class="container">
+    <% if logged_in? == false %>
+      <p><%= button_to 'Log In/Sign Up With Google', '/auth/google_oauth2', method: :get, class: "btn btn-info" %><p>
+    <% end %>
+  </section>
 </center>
 </section>
 
 <center>
 <section id="welcome_images">
   <section class="link">
-    <h3>Get Job</h3>
+    <h3><%= link_to "Get Job", "/search/jobs", class:"link-dark"%></h3>
     <img src="https://i.postimg.cc/qBhr3KKB/1.webp" alt="">
   </section>
   <section class="link">
