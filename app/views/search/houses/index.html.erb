@@ -27,7 +27,8 @@
         <%= house.bedrooms%> bedrooms, <br>
         <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
         <br>
-        Contact <%= house.contact%> with inquiries!
+        Contact <%= house.contact%> with inquiries! <br>
+        <%= link_to "Save House", "/houses/#{house.mls_id}/save", method: :post, class: 'btn btn-info btn-sm' %>
       </center>
       <section class="shadow-lg p-3 mb-5 rounded">
         <% house.photos.each do |photo| %>

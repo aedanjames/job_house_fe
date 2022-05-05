@@ -17,9 +17,10 @@ Rails.application.routes.draw do
     get '/jobs/results', to: 'jobs#index'
     post '/jobs/show', to: 'jobs#show'
     post '/jobs/save', to: 'jobs#save'
-
+    
     get 'houses/results', to: 'houses#index'
   end
+  post 'houses/:mls_id/save', to: 'houses#save'
 
   get '/dashboard', to: 'users#index'
 

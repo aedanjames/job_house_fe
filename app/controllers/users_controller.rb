@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = UserFacade.retrieve_user(session[:email])
     session[:user_id] = @user.id
     @jobs = JobFacade.format_jobs(@user.jobs)
+    @houses = HouseFacade.saved_houses(session[:email])
   end
 
   def logout

@@ -1,35 +1,70 @@
 <center>
 <section class="p-4 mb-2 bg-info text-black"><h5>Welcome <%= @user.email %>!</h5></section>
-<p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
+
 <% if @jobs.empty? %>
   <section class="p-4 mb-2 bg-info text-black"><h5>You Haven't Saved Any Jobs Yet</h5></section>
+  <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
 <% else %>
-<h4><section class="text-decoration-underline">Jobs You've Saved</section></h4>
-<ul class="list-group list-group-flush">
-<% @jobs.each do |job| %>
-    <li class="list-group-item">
-      <section class="text-decoration-underline">Title</section>
-        <h5><%= job.title %></h5>
-      <section class="text-decoration-underline">Location<br>
-      </section>
-        <h5><%= "#{job.city}, #{job.state}" %></h5>
-        <h4><span class="badge bg-success">$<%=job.salary %></span></h4>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+      <% @jobs.each do |job| %>
+        <div class="card-body">
+          <h4 class="card-title"><section class="text-decoration-underline">Jobs You've Saved</section></h4>
+          <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
+          <li class="list-group-item">
+            <section class="text-decoration-underline">Title</section>
+              <h5><%= job.title %></h5>
+            <section class="text-decoration-underline">Location<br></section>
+            <h5><%= "#{job.city}, #{job.state}" %></h5>
+          <p class="card-text"><h4><span class="badge bg-success">$<%=job.salary %></span></h4></p>
+          <section class="container">
+            <section class="row align-items-start">
+             <section class="col">
+               <%= button_to "Find Homes", "/jobs/#{job.id}", method: :get, class:"btn btn-dark" %>
+             </section>
+             <section class="col">
+              <%= button_to "Saved Homes", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark" %><br>
+             </section>
+             <section class="col">
+               <%= button_to "Delete Job", "/jobs/#{job.id}", method: :delete, class: 'btn btn-danger btn-sm'%>
+             </section>
+            </section>
+          </section>
+          </li>
+        </div>
+      <% end %>
+      </div>
+    </div>
+<% end %>
+<% if @houses.empty? %>
+  <section class="p-4 mb-2 bg-info text-black"><h5>You Haven't Saved Any Houses Yet</h5></section>
+  <p><%= button_to 'Search For Houses', search_houses_path, method: :get, class: 'btn btn-info' %></p>
+<% else %>
+  <div class="col-sm-6">
+    <div class="card">
+    <% @houses.each do |house|%>
+      <div class="card-body">
+        <h4 class="card-title"><section class="text-decoration-underline">Homes You've Saved</section></h4>
+        <p><%= button_to 'Search For Houses', search_houses_path, method: :get, class: 'btn btn-info' %></p>
+          <h5><strong><%= house.address%></strong><h5>
+          <h4><span class="badge bg-success">$<%=house.listing_price %></span></h4>
+          <%= house.bedrooms%> bedrooms, <br>
+          <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
+          <br>
+          Contact <%= house.contact%> with inquiries! <br>
+          <section class="shadow-lg p-3 mb-5 rounded">
+          <% house.photos.each_with_index do |photo, index| %>
+            <% if index == 0 %>
+              <img src=<%= "#{photo}" %>
+            <% end %>
+          <% end %>
+          </section>
+      </div>
+    <% end %>
+    </div>
+  </div>
+<% end %>
+</div>
 
-<section class="container">
-  <section class="row align-items-start">
-    <section class="col">
-      <%= button_to "Find Homes", "/jobs/#{job.id}", method: :get, class:"btn btn-dark" %>
-    </section>
-    <section class="col">
-      <%= button_to "Delete Job", "/jobs/#{job.id}", method: :delete, class: 'btn btn-danger btn-sm'%>
-    </section>
-    <section class="col">
-      <%= button_to "Saved Homes", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark" %>
-    </section>
-  </section>
-</section>
-    </li>
-<% end %>
-<% end %>
-</ul>
 </center>

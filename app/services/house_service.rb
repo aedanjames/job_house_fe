@@ -16,5 +16,20 @@ class HouseService
       end
       parse_json(response)
     end
+
+    def save_house(user_email, mls_id)
+      response = connection.post('houses') do |faraday|
+        faraday.params[:email] = user_email
+        faraday.params[:mls_id] = mls_id
+      end
+      binding.pry
+    end
+
+    def get_saved_houses(user_email)
+      response = connection.get('users/houses') do |faraday|
+        faraday.params[:email] = user_email
+      end
+      parse_json(response)
+    end
   end
 end

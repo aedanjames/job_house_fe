@@ -7,5 +7,4 @@ class Search::HousesController < ApplicationController
       @houses = HouseFacade.house_index(params[:location], params[:max_price])
     end
   end
-
 end
