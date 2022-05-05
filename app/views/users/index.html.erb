@@ -2,8 +2,15 @@
 <section class="p-4 mb-2 bg-info text-black"><h5>Welcome <%= @user.email %>!</h5></section>
 
 <% if @jobs.empty? %>
-  <section class="p-4 mb-2 bg-info text-black"><h5>You Haven't Saved Any Jobs Yet</h5></section>
-  <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+      <div class="card-body">
+        <section class="p-4 mb-2 bg-info text-black"><h5>You Haven't Saved Any Jobs Yet</h5></section>
+        <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
+      </div>
+    </div>
+  </div>
 <% else %>
   <div class="row">
     <div class="col-sm-6">
