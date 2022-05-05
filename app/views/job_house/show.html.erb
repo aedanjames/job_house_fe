@@ -40,9 +40,11 @@
             <%= button_to "Save House", "/jobs/#{@job.id}/#{house.mls_id}", method: :post, class: 'btn btn-info btn-sm'%>
           </center>
           </center>
+            <section class="shadow-lg p-3 mb-5 rounded">
             <% house.photos.each do |photo| %>
               <img src=<%= "#{photo}" %>>
             <% end %>
+            </section>
           </p>
           <br><br>
           <% end %>
