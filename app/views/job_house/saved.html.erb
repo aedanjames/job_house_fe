@@ -28,12 +28,14 @@
             <%= house.bedrooms%> bedrooms, <br>
             <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
             <br>
-            Contact <%= house.contact%> with inquiries! 
+            Contact <%= house.contact%> with inquiries!
+            <%= button_to "Contact Realtor", "/houses/#{house.mls_id}/#{house.contact}", method: :get, class: 'btn btn-info btn-sm'%><br>
             <%= button_to "Delete House", "/jobs/#{@job.id}/houses/#{house.mls_id}", method: :delete, class: 'btn btn-danger btn-sm'%>
-
-            <% house.photos.each do |photo| %>
-              <img src=<%= "#{photo}" %>>
-            <% end %>
+            <section class="shadow-lg p-3 mb-5 rounded">
+              <% house.photos.each do |photo| %>
+                <img src=<%= "#{photo}" %>>
+              <% end %>
+            </section>
           </p>
           <br><br>
           <% end %>

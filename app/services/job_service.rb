@@ -35,6 +35,6 @@ class JobService
       response = connection.delete("user/jobs/#{job_id}") do |faraday|
         faraday.params[:user_id] = user_id
       end
-    end 
+    end
   end
 end

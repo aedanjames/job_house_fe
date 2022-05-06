@@ -3,4 +3,7 @@ class SearchController < ApplicationController
   
   def search_for_jobs
   end
+
+  def search_for_houses
+  end
 end

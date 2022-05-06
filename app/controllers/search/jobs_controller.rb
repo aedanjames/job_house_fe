@@ -11,7 +11,7 @@ class Search::JobsController < ApplicationController
       @jobs = JobFacade.jobs_by_location(params[:location], params[:salary_min])
     else 
       @jobs = JobFacade.jobs_by_location(params[:location])
-    end 
+    end
   end
 
   def show
