@@ -1,34 +1,33 @@
 <center>
 <section class="p-4 mb-2 bg-info text-black"><h5>Welcome <%= @user.email %>!</h5></section>
-
 <% if @jobs.empty? && @houses.empty? %>
   <section class="col-sm-6">
-    <section class="card">
-    <section class="card-body">
+    <section class="card" >
       <section class="p-4 mb-2 bg-info text-black"><h5>Looks like You Haven't Saved Any Houses Or Jobs Yet</h5></section>
-      <section class="row align-items-start">
-           <section class="col">
-             <p><%= button_to 'Search For Houses', search_houses_path, method: :get, class: 'btn btn-info' %></p>
-           </section>
-           <section class="col">
-            <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
+      <section class="card-body">
+        <section class="row align-items-start">
+             <section class="col">
+              <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-dark' %></p>
+            </section>
+             <section class="col">
+               <p><%= button_to 'Search For Houses', search_houses_path, method: :get, class: 'btn btn-dark' %></p>
+             </section>
+            <p><%= button_to 'Help! How Do I Even Use JobHouse?', about_path, method: :get, class: 'btn btn-info' %></p>
           </section>
-          <p><%= button_to 'Help! How Do I Even Use JobHouse?', about_path, method: :get, class: 'btn btn-info' %></p>
+        </section>
         </section>
       </section>
-      </section>
-    </section>
     </section>
   </section>
 <% end %>
 
 <% if @jobs.empty? && @houses.present?%>
   <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
+  <div class="col-sm-6">
+    <div class="card">
       <section class="p-4 mb-2 bg-info text-black"><h5>You Haven't Saved Any Jobs Yet</h5></section>
       <div class="card-body">
-        <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
+      <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
       </div>
     </div>
   </div>
@@ -55,7 +54,6 @@
                  </section>
                 </section>
               </section>
-
               <section class="shadow-lg p-3 mb-5 rounded">
                 <% house.photos.each_with_index do |photo, index| %>
                   <% if index == 0 %>
@@ -72,6 +70,36 @@
 <% if @houses.empty?  && @jobs.present?%>
   <div class="row">
     <div class="col-sm-6">
+      <h4 class="card-title"><section class="text-decoration-underline">Jobs You've Saved</section></h4>
+      <div class="card">
+          <div class="card-body">
+            <% @jobs.each do |job| %>
+              <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
+              <li class="list-group-item">
+                <section class="text-decoration-underline">Title</section>
+                  <h5><%= job.title %></h5>
+                <section class="text-decoration-underline">Location<br></section>
+                <h5><%= "#{job.city}, #{job.state}" %></h5>
+              <p class="card-text"><h4><span class="badge bg-success">$<%=job.salary %></span></h4></p>
+              <section class="container">
+                <section class="row align-items-start">
+                 <section class="col">
+                   <%= button_to "Houses For This Job", "/jobs/#{job.id}", method: :get, class:"btn btn-dark btn-sm" %>
+                 </section>
+                 <section class="col">
+                  <%= button_to "Saved Houses", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark btn-sm" %><br>
+                 </section>
+                 <section class="col">
+                   <%= button_to "Delete Job", "/jobs/#{job.id}", method: :delete, class: 'btn btn-danger btn-sm'%>
+                 </section>
+                </section>
+              </section>
+              </li>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <div class="col-sm-6">
       <div class="card">
       <section class="p-4 mb-2 bg-info text-black"><h5>You Haven't Saved Any Houses Yet</h5></section>
         <div class="card-body">
@@ -79,6 +107,11 @@
         </div>
       </div>
     </div>
+  </div>
+<% end %>
+
+<% if @jobs.present? && @houses.present? %>
+  <div class="row">
     <div class="col-sm-6">
       <h4 class="card-title"><section class="text-decoration-underline">Jobs You've Saved</section></h4>
       <div class="card">
@@ -94,7 +127,7 @@
               <section class="container">
                 <section class="row align-items-start">
                  <section class="col">
-                   <%= button_to "Find Houses", "/jobs/#{job.id}", method: :get, class:"btn btn-dark btn-sm" %>
+                   <%= button_to "Houses For This Job", "/jobs/#{job.id}", method: :get, class:"btn btn-dark btn-sm" %>
                  </section>
                  <section class="col">
                   <%= button_to "Saved Houses", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark btn-sm" %><br>
@@ -109,12 +142,6 @@
           <% end %>
         </div>
       </div>
-    </div>
-  </div>
-<% end %>
-
-<% if @jobs.present? && @houses.present? %>
-  <div class="row">
     <div class="col-sm-6">
       <h4 class="card-title"><section class="text-decoration-underline">Houses You've Saved</section></h4>
       <div class="card">
@@ -131,10 +158,7 @@
               <section class="container">
                 <section class="row align-items-start">
                  <section class="col">
-                   <%= button_to "Find Jobs", "/houses/#{house.mls_id}/jobs", method: :get, class:"btn btn-dark btn-sm" %>
-                 </section>
-                 <section class="col">
-                  <%= button_to "Saved Houses", "/houses/jobs/saved", method: :get, class:"btn btn-dark btn-sm" %><br>
+                   <%= button_to "Jobs For This House", "/houses/#{house.mls_id}/jobs", method: :get, class:"btn btn-dark btn-sm" %>
                  </section>
                  <section class="col">
                    <%= button_to "Delete House", "/houses/#{house.mls_id}/destroy", method: :delete, class: 'btn btn-danger btn-sm'%><br>
@@ -151,37 +175,6 @@
               </section>
             <% end %>
           </div>
-      </div>
-    </div>
-        <div class="col-sm-6">
-      <h4 class="card-title"><section class="text-decoration-underline">Jobs You've Saved</section></h4>
-      <div class="card">
-          <div class="card-body">
-            <% @jobs.each do |job| %>
-              <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
-              <li class="list-group-item">
-                <section class="text-decoration-underline">Title</section>
-                  <h5><%= job.title %></h5>
-                <section class="text-decoration-underline">Location<br></section>
-                <h5><%= "#{job.city}, #{job.state}" %></h5>
-              <p class="card-text"><h4><span class="badge bg-success">$<%=job.salary %></span></h4></p>
-              <section class="container">
-                <section class="row align-items-start">
-                 <section class="col">
-                   <%= button_to "Find Houses", "/jobs/#{job.id}", method: :get, class:"btn btn-dark btn-sm" %>
-                 </section>
-                 <section class="col">
-                  <%= button_to "Saved Houses", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark btn-sm" %><br>
-                 </section>
-                 <section class="col">
-                   <%= button_to "Delete Job", "/jobs/#{job.id}", method: :delete, class: 'btn btn-danger btn-sm'%>
-                 </section>
-                </section>
-              </section>
-              </li>
-            </div>
-          <% end %>
-        </div>
       </div>
     </div>
   </div>
