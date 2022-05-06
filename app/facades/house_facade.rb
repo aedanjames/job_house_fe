@@ -13,6 +13,13 @@ class HouseFacade
       houses_json[:data].map do |house_data|
         House.new(house_data)
       end
-    end 
+    end
+
+    def saved_houses(user_email)
+      houses_json = HouseService.get_saved_houses(user_email)
+      houses_json[:data].map do |house_data|
+        House.new(house_data)
+      end 
+    end
   end
 end
