@@ -74,9 +74,9 @@
 <% else %>
   <div class="col-sm-6">
     <div class="card">
-    <% @houses.each do |house|%>
       <div class="card-body">
         <h4 class="card-title"><section class="text-decoration-underline">Homes You've Saved</section></h4>
+      <% @houses.each do |house|%>
         <p><%= button_to 'Search For Houses', search_houses_path, method: :get, class: 'btn btn-info' %></p>
           <h5><strong><%= house.address%></strong><h5>
           <h4><span class="badge bg-success">$<%=house.listing_price %></span></h4>
@@ -84,6 +84,18 @@
           <%= "#{house.full_baths} Full Bath(s), #{house.half_baths} Half Bath(s)" %>
           <br>
           <%= button_to "Send One-Click Inquiry Email", "/houses/#{house.mls_id}/#{house.contact}", method: :get, class: 'btn btn-info btn-sm'%><br>
+
+          <section class="container">
+            <section class="row align-items-start">
+             <section class="col">
+               <%= button_to "Find Jobs", "/houses/#{house.mls_id}/jobs", method: :get, class:"btn btn-dark" %>
+             </section>
+             <section class="col">
+              <%= button_to "Saved Houses", "/houses/jobs/saved", method: :get, class:"btn btn-dark" %><br>
+             </section>
+            </section>
+          </section>
+
           <section class="shadow-lg p-3 mb-5 rounded">
           <% house.photos.each_with_index do |photo, index| %>
             <% if index == 0 %>

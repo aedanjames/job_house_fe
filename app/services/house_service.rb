@@ -22,7 +22,6 @@ class HouseService
         faraday.params[:email] = user_email
         faraday.params[:mls_id] = mls_id
       end
-      binding.pry
     end
 
     def get_saved_houses(user_email)

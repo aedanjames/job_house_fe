@@ -1,0 +1,32 @@
+<center>
+<% if @jobs.empty? %>
+  <section class="p-3 mb-2 bg-info text-black"><h5>Oops! There Are No Jobs To Show For This House</h5></section>
+<% else %>
+  <% @jobs.each do |job| %>
+    <%= form_with url: '/houses/jobs/show', namespace: :search, method: :post, local: true do |f| %>
+      <br>
+      <section class="text-decoration-underline">Title</section>
+        <h4><%= job.title %></h4>
+      <section class="text-decoration-underline">Salary</section>
+      <h4><span class="badge bg-success">$<%=job.salary %></span></h4>
+      <% f.label :id %>
+      <%= f.hidden_field :id, :value => "#{job.id}" %>
+      <% f.label :title %>
+      <%= f.hidden_field :title, :value => "#{job.title}" %>
+      <% f.label :company %>
+      <%= f.hidden_field :company, :value => "#{job.company}" %>
+      <% f.label :city %>
+      <%= f.hidden_field :city, :value => "#{job.city}" %>
+      <% f.label :state %>
+      <%= f.hidden_field :state, :value => "#{job.state}" %>
+      <% f.label :salary %>
+      <%= f.hidden_field :salary, :value => "#{job.salary}" %>
+      <% f.label :contact %>
+      <%= f.hidden_field :contact, :value => "#{job.contact}" %>
+      <%= f.submit "See Details", class: "btn btn-info" %>
+      </p>
+    <% end %>
+    <br>
+  <% end %>
+<% end %>
+</cetner>

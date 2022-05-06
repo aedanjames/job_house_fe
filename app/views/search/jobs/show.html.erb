@@ -8,7 +8,7 @@
 <section class="text-decoration-underline">Location</section>
 <h4><%= "#{@job.city}, #{@job.state}" %></h4>
 <section class="text-decoration-underline">Salary</section>
-<h3>$<%= @job.salary %></h3>
+<h4><span class="badge bg-success">$<%=@job.salary %></span></h4>
 </p>
 
 <%= form_with url: search_jobs_save_path, method: :post, local: true do |f| %>

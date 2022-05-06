@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   delete '/jobs/:job_id/houses/:house_id', to: 'job_house#delete_house'
   post '/jobs/:job_id/:house_id', to: 'job_house#save_house'
 
-  get '/houses/:mls_id/:realtor_contact', to: 'users#email_realtor'
   namespace :search do
     get '/jobs', to: 'search#search_for_jobs'
     get '/jobs/results', to: 'jobs#index'
@@ -29,4 +28,9 @@ Rails.application.routes.draw do
   delete '/logout', to: 'users#logout'
 
   resources :jobs, only: [:show, :destroy], controller: :job_house
+  get '/houses/:mls_id/jobs', to: 'house_jobs#index'
+  post '/houses/jobs/show', to: 'house_jobs#show'
+  get '/houses/jobs/saved', to: 'house_jobs#saved'
+  get '/houses/:mls_id/:realtor_contact', to: 'users#email_realtor'
+
 end
