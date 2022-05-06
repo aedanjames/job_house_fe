@@ -1,7 +1,28 @@
 <center>
 <section class="p-4 mb-2 bg-info text-black"><h5>Welcome <%= @user.email %>!</h5></section>
 
-<% if @jobs.empty? %>
+<% if @jobs.empty? && @houses.empty? %>
+  <section class="col-sm-6">
+    <section class="card">
+    <section class="card-body">
+      <section class="p-4 mb-2 bg-info text-black"><h5>Looks like You Haven't Saved Any Houses Or Jobs Yet</h5></section>
+      <section class="row align-items-start">
+           <section class="col">
+             <p><%= button_to 'Search For Houses', search_houses_path, method: :get, class: 'btn btn-info' %></p>
+           </section>
+           <section class="col">
+            <p><%= button_to 'Search For Jobs', search_jobs_path, method: :get, class: 'btn btn-info' %></p>
+          </section>
+        </section>
+      </section>
+      </section>
+      <p><%= button_to 'Help! How Do I Even Use JobHouse?', about_path, method: :get, class: 'btn btn-info' %></p>
+    </section>
+    </section>
+  </section>
+<% end %>
+
+<% if @jobs.empty? && @houses.present?%>
   <div class="row">
     <div class="col-sm-6">
       <div class="card">
@@ -44,7 +65,10 @@
       </div>
     </div>
 <% end %>
-<% if @houses.empty? %>
+<% if @houses.empty?  && @jobs.present?%>
+    <div class="col-sm-6">
+      <div class="card">
+      <div class="card-body">
   <section class="p-4 mb-2 bg-info text-black"><h5>You Haven't Saved Any Houses Yet</h5></section>
   <p><%= button_to 'Search For Houses', search_houses_path, method: :get, class: 'btn btn-info' %></p>
 <% else %>

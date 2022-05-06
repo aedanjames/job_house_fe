@@ -1,9 +1,18 @@
 <center>
 <section class="mb-3, shadow-sm p-3 mb-5 ">
   <section class="container">
-    <% if logged_in? == false %>
-      <p><%= button_to 'Log In/Sign Up With Google', '/auth/google_oauth2', method: :get, class: "btn btn-info" %><p>
-    <% end %>
+  <% if logged_in? == false %>
+    <p><strong>Welcome To JobHouse</strong> Feel Free To Browse Houses and Jobs.</p>
+    <div class="row align-items-start">
+      <div class="col">
+        <%= button_to 'How Do I Use JobHouse?', about_path, method: :get, class: 'btn btn-info' %>
+      </div>
+      <div class="col">
+        <%= button_to 'Log In/Sign Up With Google', '/auth/google_oauth2', method: :get, class: "btn btn-info" %>
+      </div>
+    </div>
+  <% end %>
+  </div>
   </section>
 </center>
 </section>
