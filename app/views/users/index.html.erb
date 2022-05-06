@@ -48,10 +48,7 @@
               <section class="container">
                 <section class="row align-items-start">
                  <section class="col">
-                   <%= button_to "Find Jobs", "/houses/#{house.mls_id}/jobs", method: :get, class:"btn btn-dark" %>
-                 </section>
-                 <section class="col">
-                  <%= button_to "Saved Houses", "/houses/jobs/saved", method: :get, class:"btn btn-dark" %><br>
+                   <%= button_to "Find Jobs", "/houses/#{house.mls_id}/jobs", method: :get, class:"btn btn-dark btn-sm" %>
                  </section>
                  <section class="col">
                    <%= button_to "Delete House", "/houses/#{house.mls_id}/destroy", method: :delete, class: 'btn btn-danger btn-sm'%><br>
@@ -97,10 +94,10 @@
               <section class="container">
                 <section class="row align-items-start">
                  <section class="col">
-                   <%= button_to "Find Homes", "/jobs/#{job.id}", method: :get, class:"btn btn-dark" %>
+                   <%= button_to "Find Houses", "/jobs/#{job.id}", method: :get, class:"btn btn-dark btn-sm" %>
                  </section>
                  <section class="col">
-                  <%= button_to "Saved Homes", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark" %><br>
+                  <%= button_to "Saved Houses", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark btn-sm" %><br>
                  </section>
                  <section class="col">
                    <%= button_to "Delete Job", "/jobs/#{job.id}", method: :delete, class: 'btn btn-danger btn-sm'%>
@@ -134,10 +131,10 @@
               <section class="container">
                 <section class="row align-items-start">
                  <section class="col">
-                   <%= button_to "Find Jobs", "/houses/#{house.mls_id}/jobs", method: :get, class:"btn btn-dark" %>
+                   <%= button_to "Find Jobs", "/houses/#{house.mls_id}/jobs", method: :get, class:"btn btn-dark btn-sm" %>
                  </section>
                  <section class="col">
-                  <%= button_to "Saved Homes", "/houses/jobs/saved", method: :get, class:"btn btn-dark" %><br>
+                  <%= button_to "Saved Houses", "/houses/jobs/saved", method: :get, class:"btn btn-dark btn-sm" %><br>
                  </section>
                  <section class="col">
                    <%= button_to "Delete House", "/houses/#{house.mls_id}/destroy", method: :delete, class: 'btn btn-danger btn-sm'%><br>
@@ -171,10 +168,10 @@
               <section class="container">
                 <section class="row align-items-start">
                  <section class="col">
-                   <%= button_to "Find Homes", "/jobs/#{job.id}", method: :get, class:"btn btn-dark" %>
+                   <%= button_to "Find Houses", "/jobs/#{job.id}", method: :get, class:"btn btn-dark btn-sm" %>
                  </section>
                  <section class="col">
-                  <%= button_to "Saved Homes", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark" %><br>
+                  <%= button_to "Saved Houses", "/jobs/#{job.id}/houses/saved", method: :get, class:"btn btn-dark btn-sm" %><br>
                  </section>
                  <section class="col">
                    <%= button_to "Delete Job", "/jobs/#{job.id}", method: :delete, class: 'btn btn-danger btn-sm'%>
